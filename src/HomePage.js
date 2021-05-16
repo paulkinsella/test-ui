@@ -87,8 +87,8 @@ const HomePage = () => {
           ></input>
         </div>
         <NavLink exact activeClassName="current" to='/overview'>
-          <a href="./">Overview</a>
-        </NavLink>
+          Overview
+        </NavLink><i class="fa fa-line-chart" aria-hidden="true"></i>
         {getFilter()}
         {/* <Test /> */}
       </DesktopCard>

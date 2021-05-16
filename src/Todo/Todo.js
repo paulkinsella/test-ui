@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Todo.css";
 import DesktopCard from '../DesktopCard/DesktopCard';
+import { NavLink } from "react-router-dom";
 
 const Todo = () => {
   const url = './todo.json';
@@ -29,6 +30,9 @@ const Todo = () => {
     <div className="container">
       <div className="headerSection">Todo</div>
       <DesktopCard>
+        <NavLink exact activeClassName="current" to='./'>
+          <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+        </NavLink>
         <div className="tableContainer">
           <table>
             <tr>
