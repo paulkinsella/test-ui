@@ -1,0 +1,33 @@
+.container {
+  background-color: #abc3c5;
+  text-align: center;
+  height: 1000px;
+}
+
+.tableContainer {
+  padding-top: 50px;
+  margin: auto;
+  width: 100%;
+}
+
+.customRow {
+  background-color: lightgray;
+  /* border-bottom: solid black 2px; */
+}
+
+td {
+  /* border: solid black 2px; */
+  text-align: center;
+}
+
+table {
+  width: 600px;
+  border: solid black 2px;
+  margin: auto;
+}
+
+.cellHeading {
+  font-size: 24px;
+  font-weight: 500;
+  border-bottom: solid black 2px;
+}

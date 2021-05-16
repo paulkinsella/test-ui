@@ -1,0 +1,68 @@
+[
+  {
+    "currentSprint": "1",
+    "weekStart": "26/11/2020",
+    "weekEnd": "02/12/2020",
+    "todo": 25,
+    "inProgress": 9,
+    "verPending": 4,
+    "test": 5,
+    "poAcceptance": 6,
+    "done": 16
+  },
+  {
+    "currentSprint": "2",
+    "weekStart": "02/12/2020",
+    "weekEnd": "09/12/2020",
+    "todo": 6,
+    "inProgress": 2,
+    "verPending": 24,
+    "test": 15,
+    "poAcceptance": 20,
+    "done": 16
+  },
+  {
+    "currentSprint": "3",
+    "weekStart": "09/12/2020",
+    "weekEnd": "16/12/2020",
+    "todo": 10,
+    "inProgress": 19,
+    "verPending": 10,
+    "test": 7,
+    "poAcceptance": 15,
+    "done": 22
+  },
+  {
+    "currentSprint": "4",
+    "weekStart": "16/12/2020",
+    "weekEnd": "23/12/2020",
+    "todo": 20,
+    "inProgress": 25,
+    "verPending": 6,
+    "test": 2,
+    "poAcceptance": 17,
+    "done": 20
+  },
+  {
+    "currentSprint": "5",
+    "weekStart": "23/12/2020",
+    "weekEnd": "01/01/2021",
+    "todo": 22,
+    "inProgress": 11,
+    "verPending": 14,
+    "test": 15,
+    "poAcceptance": 16,
+    "done": 26
+  },
+  {
+    "currentSprint": "6",
+    "weekStart": "01/01/2021",
+    "weekEnd": "07/01/2021",
+    "todo": 25,
+    "inProgress": 9,
+    "verPending": 4,
+    "test": 5,
+    "poAcceptance": 6,
+    "done": 16
+  }
+]
