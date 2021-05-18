@@ -23,6 +23,26 @@
         "number": "AR-453",
         "name": "Update Bind",
         "assigne": "Developer Two"
+      },
+      {
+        "number": "AR-225",
+        "name": "Update to Terms and Condidtion",
+        "assigne": "Developer One"
+      },
+      {
+        "number": "AR-300",
+        "name": "Add mapping",
+        "assigne": "Developer One"
+      },
+      {
+        "number": "AR-450",
+        "name": "Create new input",
+        "assigne": "Developer Three"
+      },
+      {
+        "number": "AR-453",
+        "name": "Update Bind",
+        "assigne": "Developer Two"
       }
     ],
     "inProgress": [
@@ -133,7 +153,7 @@
   },
   {
     "currentSprint": "2",
-    "weekStart": "26/11/2020",
+    "weekStart": "27/11/2020",
     "weekEnd": "02/12/2020",
     "todo": [
       {
@@ -265,9 +285,29 @@
   },
   {
     "currentSprint": "3",
-    "weekStart": "26/11/2020",
+    "weekStart": "28/11/2020",
     "weekEnd": "02/12/2020",
     "todo": [
+      {
+        "number": "AR-225",
+        "name": "Update to Terms and Condidtion",
+        "assigne": "Developer One"
+      },
+      {
+        "number": "AR-300",
+        "name": "Add mapping",
+        "assigne": "Developer One"
+      },
+      {
+        "number": "AR-450",
+        "name": "Create new input",
+        "assigne": "Developer Three"
+      },
+      {
+        "number": "AR-453",
+        "name": "Update Bind",
+        "assigne": "Developer Two"
+      },
       {
         "number": "AR-225",
         "name": "Update to Terms and Condidtion",
@@ -397,7 +437,7 @@
   },
   {
     "currentSprint": "4",
-    "weekStart": "26/11/2020",
+    "weekStart": "29/11/2020",
     "weekEnd": "02/12/2020",
     "todo": [
       {
@@ -529,7 +569,7 @@
   },
   {
     "currentSprint": "5",
-    "weekStart": "26/11/2020",
+    "weekStart": "30/11/2020",
     "weekEnd": "02/12/2020",
     "todo": [
       {
@@ -551,9 +591,29 @@
         "number": "AR-453",
         "name": "Update Bind",
         "assigne": "Developer Two"
+      },
+      {
+        "number": "AR-450",
+        "name": "Create new input",
+        "assigne": "Developer Three"
+      },
+      {
+        "number": "AR-453",
+        "name": "Update Bind",
+        "assigne": "Developer Two"
       }
     ],
     "inProgress": [
+      {
+        "number": "AR-453",
+        "name": "Update Bind",
+        "assigne": "Developer Two"
+      },
+      {
+        "number": "AR-453",
+        "name": "Update Bind",
+        "assigne": "Developer Two"
+      },
       {
         "number": "AR-453",
         "name": "Update Bind",
@@ -661,7 +721,7 @@
   },
   {
     "currentSprint": "6",
-    "weekStart": "26/11/2020",
+    "weekStart": "31/11/2020",
     "weekEnd": "02/12/2020",
     "todo": [
       {
@@ -686,6 +746,11 @@
       }
     ],
     "inProgress": [
+      {
+        "number": "AR-453",
+        "name": "Update Bind",
+        "assigne": "Developer Two"
+      },
       {
         "number": "AR-453",
         "name": "Update Bind",
