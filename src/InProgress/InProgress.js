@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./InProgress.css";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import { NavLink } from "react-router-dom";
@@ -38,7 +38,7 @@ const InProgress = (props) => {
             }>
             <option>number</option>
             <option>name</option>
-            <option>assigne</option>
+            <option>assignee</option>
           </select>
           <input
             className="search"
@@ -57,7 +57,7 @@ const InProgress = (props) => {
             <tr>
               <td className="cellHeading">Number</td>
               <td className="cellHeading">Name</td>
-              <td className="cellHeading">Assigne</td>
+              <td className="cellHeading">Assignee</td>
             </tr>
             {search === " " ? getData() : getFilter()}
           </table>

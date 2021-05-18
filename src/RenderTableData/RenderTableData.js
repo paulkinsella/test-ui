@@ -7,7 +7,7 @@ const RenderTableData = (props) => {
     <tr className="customRow" index={index} >
       <td>{item.number}</td>
       <td>{item.name}</td>
-      <td>{item.assigne}</td>
+      <td>{item.assignee}</td>
     </tr>
   );
 };
