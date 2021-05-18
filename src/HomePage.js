@@ -5,10 +5,10 @@ import { NavLink } from 'react-router-dom';
 
 
 const HomePage = () => {
-  const url = './data.json';
+  const url = './test.json';
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState('currentSprint');
-  const [search, setSearch] = useState('6');
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     fetch(url)
@@ -18,44 +18,64 @@ const HomePage = () => {
       });
   }, []);
 
-  const getFilter = () => {
-    const filterResult = data.filter(item => !!item[filter] && item[filter] === search);;
-    return filterResult.map((item, index) => (
-      <><div className="row">
-        <NavLink exact activeClassName="current" to='/todo'>
+  console.log("Data", data);
+
+  const currentSprintData = data[data.length - 1];
+  console.log("currentSprintData", currentSprintData);
+
+  const getData = () => {
+    const filterResult = data.filter(item => !!item[filter] && item[filter] === search);
+    console.log("FilterData", filterResult);
+    return filterResult.map((item) => (
+      <> <div className="row">
+        <NavLink to={{
+          pathname: '/todo',
+          todoProps: {
+            todoData: item.todo
+          }
+        }} >
           <div className="card">
             <div className="name">ToDo</div>
-            <div className="value">{item.todo}</div>
+            <div className="value">{item.todo.length}</div>
+          </div>
+        </NavLink>
+        <NavLink to={{
+          pathname: '/inprogress',
+          inProgressProps: {
+            inProgressData: item.inProgress
+          }
+        }} >
+          <div className="card">
+            <div className="name">InProgress</div>
+            <div className="value">{item.inProgress.length}</div>
           </div>
         </NavLink>
         <div className="card">
-          <div className="name">InProgress</div>
-          <div className="value">{item.inProgress}</div>
-        </div>
-        <div className="card">
           <div className="name">Verification Pending</div>
-          <div className="value">{item.verPending}</div>
+          <div className="value">{item.varPending.length}</div>
         </div>
       </div>
         <div className="row">
           <div className="card">
-            <div className="name">TEST</div>
-            <div className="value">{item.test}</div>
+            <div className="name">Test</div>
+            <div className="value">{item.test.length}</div>
           </div>
           <div className="card">
             <div className="name">PO Acceptance</div>
-            <div className="value">{item.poAcceptance}</div>
+            <div className="value">{item.poAcceptance.length}</div>
           </div>
           <div className="card">
             <div className="name">Done</div>
-            <div className="value">{item.done}</div>
+            <div className="value">{item.done.length}</div>
           </div>
         </div>
         <div className="info">
           <div className="sprint">Sprint: {item.currentSprint}</div>
           <div className="week">Week <br />{item.weekStart} - {item.weekEnd}</div>
           <i className="fa fa-arrow-left"></i>{' '}<i className="fa fa-arrow-right"></i>
-        </div></>
+        </div>
+      </>
+
     ));
   };
 
@@ -86,11 +106,15 @@ const HomePage = () => {
             }
           ></input>
         </div>
-        <NavLink exact activeClassName="current" to='/overview'>
+        <NavLink to={{
+          pathname: '/overview',
+          todoProps: {
+            todoData: data
+          }
+        }}>
           Overview
         </NavLink><i class="fa fa-line-chart" aria-hidden="true"></i>
-        {getFilter()}
-        {/* <Test /> */}
+        {getData()}
       </DesktopCard>
     </div>
   );

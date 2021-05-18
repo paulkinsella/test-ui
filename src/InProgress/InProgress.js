@@ -1,10 +1,10 @@
 import React from "react";
-import "./Todo.css";
+import "./InProgress.css";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import { NavLink } from "react-router-dom";
 
-const Todo = (props) => {
-  const data = props.location.todoProps.todoData;
+const InProgress = (props) => {
+  const data = props.location.inProgressProps.inProgressData;
 
   const getData = () => {
     return data.map((item, index) => (
@@ -38,4 +38,4 @@ const Todo = (props) => {
   );
 };
 
-export default Todo;
+export default InProgress;
