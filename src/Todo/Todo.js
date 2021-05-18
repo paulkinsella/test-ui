@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Todo.css";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import { NavLink } from "react-router-dom";
+import RenderTableData from "../RenderTableData/RenderTableData";
 
 const Todo = (props) => {
-  const data = props.location.todoProps.todoData;
+  const [filter, setFilter] = useState('number');
+  const [search, setSearch] = useState("AR");
+  const data = props.location.todoProps.todoData ? props.location.todoProps.todoData : '';
 
   const getData = () => {
     return data.map((item, index) => (
-      <tr className="customRow" index={index}>
-        <td>{item.number}</td>
-        <td>{item.name}</td>
-        <td>{item.assigne}</td>
-      </tr>
+      <RenderTableData item={item} index={index} />
+    ));
+  };
+
+  const getFilter = () => {
+    const filterResult = data ? data.filter(item => !!item[filter] && item[filter].includes(search)) : '';
+    return filterResult.map((item, index) => (
+      <RenderTableData item={item} index={index} />
     ));
   };
 
@@ -23,6 +29,29 @@ const Todo = (props) => {
         <NavLink exact activeClassName="current" to='./'>
           <i class="fa fa-home fa-2x" aria-hidden="true"></i>
         </NavLink>
+        <div className="filter">
+          <select
+            name="filter"
+            id="filter"
+            onChange={(event) =>
+              setFilter(event.target.value)
+            }>
+            <option>number</option>
+            <option>name</option>
+            <option>assigne</option>
+          </select>
+          <input
+            className="search"
+            type="text"
+            placeholder="Search"
+            onChange={(event) =>
+              event.target.value === " "
+                ? setSearch(" ")
+                :
+                setSearch(event.target.value)
+            }
+          ></input>
+        </div>
         <div className="tableContainer">
           <table>
             <tr>
@@ -30,7 +59,7 @@ const Todo = (props) => {
               <td className="cellHeading">Name</td>
               <td className="cellHeading">Assigne</td>
             </tr>
-            {getData()}
+            {search === " " ? getData() : getFilter()}
           </table>
         </div>
       </DesktopCard>

@@ -4,11 +4,12 @@ import DesktopCard from './DesktopCard/DesktopCard';
 import { NavLink } from 'react-router-dom';
 
 
+
 const HomePage = () => {
   const url = './test.json';
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState('currentSprint');
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState('6');
 
   useEffect(() => {
     fetch(url)
@@ -100,7 +101,7 @@ const HomePage = () => {
             placeholder="Search"
             onChange={(event) =>
               event.target.value === ""
-                ? setSearch("")
+                ? setSearch("6")
                 :
                 setSearch(event.target.value)
             }
