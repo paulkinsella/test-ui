@@ -7,147 +7,152 @@
       {
         "number": "AR-225",
         "name": "Update to Terms and Condidtion",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-300",
         "name": "Add mapping",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-450",
         "name": "Create new input",
-        "assigne": "Developer Three"
+        "assignee": "Developer Three"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-225",
         "name": "Update to Terms and Condidtion",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-300",
         "name": "Add mapping",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-450",
         "name": "Create new input",
-        "assigne": "Developer Three"
+        "assignee": "Developer Three"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "inProgress": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-460",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-770",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-459",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "varPending": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
+      },
+      {
+        "number": "AR-985",
+        "name": "Update Payment",
+        "assignee": "Developer One"
       }
     ],
     "test": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "poAcceptance": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "done": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ]
   },
@@ -159,127 +164,127 @@
       {
         "number": "AR-225",
         "name": "Update to Terms and Condidtion",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-300",
         "name": "Add mapping",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-450",
         "name": "Create new input",
-        "assigne": "Developer Three"
+        "assignee": "Developer Three"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "inProgress": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "varPending": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "test": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "poAcceptance": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "done": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ]
   },
@@ -291,147 +296,152 @@
       {
         "number": "AR-225",
         "name": "Update to Terms and Condidtion",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-300",
         "name": "Add mapping",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-450",
         "name": "Create new input",
-        "assigne": "Developer Three"
+        "assignee": "Developer Three"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-225",
         "name": "Update to Terms and Condidtion",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-300",
         "name": "Add mapping",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-450",
         "name": "Create new input",
-        "assigne": "Developer Three"
+        "assignee": "Developer Three"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "inProgress": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "varPending": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Three"
+      },
+      {
+        "number": "AR-453",
+        "name": "Update Bind",
+        "assignee": "Developer One"
       }
     ],
     "test": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "poAcceptance": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "done": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ]
   },
@@ -443,127 +453,127 @@
       {
         "number": "AR-225",
         "name": "Update to Terms and Condidtion",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-300",
         "name": "Add mapping",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-450",
         "name": "Create new input",
-        "assigne": "Developer Three"
+        "assignee": "Developer Three"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "inProgress": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "varPending": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "test": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "poAcceptance": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "done": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ]
   },
@@ -575,147 +585,147 @@
       {
         "number": "AR-225",
         "name": "Update to Terms and Condidtion",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-300",
         "name": "Add mapping",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-450",
         "name": "Create new input",
-        "assigne": "Developer Three"
+        "assignee": "Developer Three"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-450",
         "name": "Create new input",
-        "assigne": "Developer Three"
+        "assignee": "Developer Three"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "inProgress": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "varPending": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "test": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "poAcceptance": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "done": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ]
   },
@@ -727,132 +737,152 @@
       {
         "number": "AR-225",
         "name": "Update to Terms and Condidtion",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-300",
         "name": "Add mapping",
-        "assigne": "Developer One"
+        "assignee": "Developer One"
       },
       {
         "number": "AR-450",
         "name": "Create new input",
-        "assigne": "Developer Three"
+        "assignee": "Developer Three"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "inProgress": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "varPending": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
-        "number": "AR-453",
+        "number": "AR-444",
+        "name": "Update Payment",
+        "assignee": "Developer Two"
+      },
+      {
+        "number": "AR-107",
+        "name": "Update Email",
+        "assignee": "Developer Two"
+      },
+      {
+        "number": "AR-358",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
+      },
+      {
+        "number": "AR-389",
+        "name": "Update Bind",
+        "assignee": "Developer Two"
+      },
+      {
+        "number": "AR-457",
+        "name": "Update Bind",
+        "assignee": "Developer Two"
       }
     ],
     "test": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "poAcceptance": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ],
     "done": [
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       },
       {
         "number": "AR-453",
         "name": "Update Bind",
-        "assigne": "Developer Two"
+        "assignee": "Developer Two"
       }
     ]
   }

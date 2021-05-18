@@ -5,6 +5,7 @@ import HomePage from './HomePage';
 import Todo from './Todo/Todo';
 import Overview from './Overview/Overview';
 import InProgress from './InProgress/InProgress';
+import VerPending from './VerPending/VerPending';
 
 const App = () => (
   <div className='app'>
@@ -20,6 +21,7 @@ const Main = () => {
         <Route exact path='/todo' component={Todo}></Route>
         <Route exact path='/overview' component={Overview}></Route>
         <Route exact path='/inprogress' component={InProgress}></Route>
+        <Route exact path='/verification-pending' component={VerPending}></Route>
       </Switch>
     </BrowserRouter></>;
 };

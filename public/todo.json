@@ -2,21 +2,21 @@
   {
     "number": "AR-225",
     "name": "Update to Terms and Condidtion",
-    "assigne": "Developer One"
+    "assignee": "Developer One"
   },
   {
     "number": "AR-300",
     "name": "Add mapping",
-    "assigne": "Developer One"
+    "assignee": "Developer One"
   },
   {
     "number": "AR-450",
     "name": "Create new input",
-    "assigne": "Developer Three"
+    "assignee": "Developer Three"
   },
   {
     "number": "AR-453",
     "name": "Update Bind",
-    "assigne": "Developer Two"
+    "assignee": "Developer Two"
   }
 ]

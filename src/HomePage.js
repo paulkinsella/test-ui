@@ -51,10 +51,17 @@ const HomePage = () => {
             <div className="value">{item.inProgress.length}</div>
           </div>
         </NavLink>
-        <div className="card">
-          <div className="name">Verification Pending</div>
-          <div className="value">{item.varPending.length}</div>
-        </div>
+        <NavLink to={{
+          pathname: '/verification-pending',
+          verPendingProps: {
+            verPendingData: item.varPending
+          }
+        }} >
+          <div className="card">
+            <div className="name">Verification Pending</div>
+            <div className="value">{item.varPending.length}</div>
+          </div>
+        </NavLink>
       </div>
         <div className="row">
           <div className="card">

@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import "./Todo.css";
+import React, { useState } from "react";
+import "./VerPending.css";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import { NavLink } from "react-router-dom";
 import RenderTableData from "../RenderTableData/RenderTableData";
 
-const Todo = (props) => {
+const VerPending = (props) => {
   const [filter, setFilter] = useState('number');
   const [search, setSearch] = useState("AR");
-  const data = props.location.todoProps.todoData ? props.location.todoProps.todoData : '';
+  const data = props.location.verPendingProps.verPendingData;
 
   const getData = () => {
     return data.map((item, index) => (
@@ -24,7 +24,7 @@ const Todo = (props) => {
 
   return (
     <div className="container">
-      <div className="headerSection">Todo</div>
+      <div className="headerSection">Verification pending</div>
       <DesktopCard>
         <NavLink exact activeClassName="current" to='./'>
           <i class="fa fa-home fa-2x" aria-hidden="true"></i>
@@ -67,4 +67,4 @@ const Todo = (props) => {
   );
 };
 
-export default Todo;
+export default VerPending;
