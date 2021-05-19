@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./VerPending.css";
 import DesktopCard from '../DesktopCard/DesktopCard';
-import { NavLink } from "react-router-dom";
 import RenderTableData from "../RenderTableData/RenderTableData";
 import SideNav from '../SideNav/SideNav';
 

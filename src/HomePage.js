@@ -20,14 +20,14 @@ const HomePage = () => {
       });
   }, []);
 
-  console.log("Data", data);
+  //console.log("Data", data);
 
   const currentSprintData = data[data.length - 1];
-  console.log("currentSprintData", currentSprintData);
+  console.log("Homepage currentSprintData", currentSprintData);
 
   const getData = () => {
     const filterResult = data.filter(item => !!item[filter] && item[filter] === search);
-    console.log("FilterData", filterResult);
+    // console.log("FilterData", filterResult);
     return filterResult.map((item) => (
       <> <div className="row">
         <NavLink to={{
@@ -90,7 +90,7 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <SideNav />
+      <SideNav currentSprintData={currentSprintData} />
       <div className="headerSection">Arachas Phase: 3</div>
       <DesktopCard>
         <div className="filter">
@@ -116,16 +116,6 @@ const HomePage = () => {
                 setSearch(event.target.value)
             }
           ></input>
-          <div className="graphIcon">
-            <NavLink to={{
-              pathname: '/overview',
-              todoProps: {
-                todoData: data
-              }
-            }}>
-              <i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>
-            </NavLink>
-          </div>
         </div>
         {getData()}
       </DesktopCard>
