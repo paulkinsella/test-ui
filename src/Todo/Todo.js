@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Todo.css";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import { NavLink } from "react-router-dom";
 import RenderTableData from "../RenderTableData/RenderTableData";
+import SideNav from '../SideNav/SideNav';
 
 const Todo = (props) => {
   const [filter, setFilter] = useState('number');
@@ -24,11 +25,9 @@ const Todo = (props) => {
 
   return (
     <div className="container">
+      <SideNav />
       <div className="headerSection">Todo</div>
       <DesktopCard>
-        <NavLink exact activeClassName="current" to='./'>
-          <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-        </NavLink>
         <div className="filter">
           <select
             name="filter"

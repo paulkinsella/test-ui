@@ -3,6 +3,7 @@ import "./VerPending.css";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import { NavLink } from "react-router-dom";
 import RenderTableData from "../RenderTableData/RenderTableData";
+import SideNav from '../SideNav/SideNav';
 
 const VerPending = (props) => {
   const [filter, setFilter] = useState('number');
@@ -24,11 +25,9 @@ const VerPending = (props) => {
 
   return (
     <div className="container">
+      <SideNav />
       <div className="headerSection">Verification pending</div>
       <DesktopCard>
-        <NavLink exact activeClassName="current" to='./'>
-          <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-        </NavLink>
         <div className="filter">
           <select
             name="filter"
