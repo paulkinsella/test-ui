@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
 import DesktopCard from './DesktopCard/DesktopCard';
+import SideNav from './SideNav/SideNav';
 import { NavLink } from 'react-router-dom';
 
 
@@ -89,10 +90,12 @@ const HomePage = () => {
 
   return (
     <div className="container">
+      <SideNav />
       <div className="headerSection">Arachas Phase: 3</div>
       <DesktopCard>
         <div className="filter">
           <select
+            className="searchFilter"
             name="filter"
             id="filter"
             onChange={(event) =>
@@ -113,15 +116,17 @@ const HomePage = () => {
                 setSearch(event.target.value)
             }
           ></input>
+          <div className="graphIcon">
+            <NavLink to={{
+              pathname: '/overview',
+              todoProps: {
+                todoData: data
+              }
+            }}>
+              <i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>
+            </NavLink>
+          </div>
         </div>
-        <NavLink to={{
-          pathname: '/overview',
-          todoProps: {
-            todoData: data
-          }
-        }}>
-          Overview
-        </NavLink><i class="fa fa-line-chart" aria-hidden="true"></i>
         {getData()}
       </DesktopCard>
     </div>

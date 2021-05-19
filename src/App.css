@@ -53,3 +53,20 @@
   height: auto;
   width: auto;
 }
+
+.filter {
+  padding-top: 30px;
+}
+
+.searchFilter {
+  height: 35px;
+}
+
+.search {
+  height: 30px;
+}
+
+.graphIcon {
+ padding-left: 15px;
+ display: contents;
+}
