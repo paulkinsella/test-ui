@@ -1,0 +1,78 @@
+.c-ProcessOverview {
+  &__chartContainer {
+    display: flex;
+    flex-direction: row;
+
+    > * {
+      flex: 1;
+      width: 50%;
+    }
+  }
+
+  .recharts-wrapper {
+    margin: auto;
+  }
+
+  &--testSuitesPieChartData {
+    border: thin solid #ccc;
+    box-shadow: 3px 3px 3px #ccc;
+    flex: 1;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+
+    > * {
+      display: inline-block;
+      flex: 1;
+      padding: 4px;
+      width: 50%;
+    }
+  }
+
+  &--testSuitesPieChartDataValue {
+    float: right;
+  }
+
+  &--testSuitesPieChartDataItem {
+    display: inline-block;
+    flex: 1;
+    padding: 4px;
+    width: 50%;
+
+    &:nth-last-of-type(2n + 1) {
+      border-right: thin solid #ccc;
+    }
+  }
+
+  &--testSuitesTotals {
+    margin: auto;
+    width: 80%;
+
+    * {
+      text-align: left;
+    }
+  }
+
+  &--titleDetails {
+    margin-bottom: 16px;
+  }
+
+  &--title {
+    color: #03787c;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+
+    > * {
+      flex: 1;
+
+      &:last-of-type {
+        text-align: right;
+      }
+    }
+  }
+
+  &--titleValue {
+    color: #000;
+  }
+}
