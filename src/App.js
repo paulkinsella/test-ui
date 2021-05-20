@@ -9,6 +9,9 @@ import VerPending from './VerPending/VerPending';
 import DefectReport from './DefectReport/DefectReport';
 import TotalDefects from './TotalDefects/TotalDefects';
 import FixedDefects from "./FixedDefects/FixedDefects";
+import OpenDefects from './OpenDefects/OpenDefects';
+import TodoDefects from './TodoDefects/TodoDefects';
+import WeeklyReport from './WeeklyReport/WeeklyReport';
 
 const App = () => (
   <div className='app'>
@@ -28,6 +31,9 @@ const Main = () => {
         <Route exact path='/defect-report' component={DefectReport}></Route>
         <Route exact path='/total-defects' component={TotalDefects}></Route>
         <Route exact path='/fixed-defects' component={FixedDefects}></Route>
+        <Route exact path='/open-defects' component={OpenDefects}></Route>
+        <Route exact path='/todo-defects' component={TodoDefects}></Route>
+        <Route exact path='/weekly-report' component={WeeklyReport}></Route>
       </Switch>
     </BrowserRouter></>;
 };

@@ -59,8 +59,50 @@
             "assignee": "Developer One"
           }
         ],
-        "testInProgress": "7",
-        "testExecuted": "10"
+        "testInProgress": [
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          }
+        ],
+        "testExecuted": [
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          }
+        ]
       }
     ],
     "defectReport": [
@@ -191,8 +233,50 @@
             "assignee": "Developer One"
           }
         ],
-        "testInProgress": "7",
-        "testExecuted": "10"
+        "testInProgress": [
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          }
+        ],
+        "testExecuted": [
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          }
+        ]
       }
     ],
     "defectReport": [
@@ -323,8 +407,50 @@
             "assignee": "Developer One"
           }
         ],
-        "testInProgress": "7",
-        "testExecuted": "10"
+        "testInProgress": [
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          }
+        ],
+        "testExecuted": [
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          }
+        ]
       }
     ],
     "defectReport": [

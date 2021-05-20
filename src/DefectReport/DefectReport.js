@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import { NavLink } from 'react-router-dom';
 import SideNav from '../SideNav/SideNav';
@@ -38,14 +38,28 @@ const DefectReport = (props) => {
         </div>
 
         <div className="row">
-          <div className="card">
-            <div className="name">Open Defects</div>
-            <div className="value">{data[0].openDefects.length}</div>
-          </div>
-          <div className="card">
-            <div className="name">Todo Defects</div>
-            <div className="value">{data[0].todoDefects.length}</div>
-          </div>
+          <NavLink to={{
+            pathname: '/open-defects',
+            openDefectProps: {
+              openDefectData: data[0].openDefects
+            }
+          }} >
+            <div className="card">
+              <div className="name">Open Defects</div>
+              <div className="value">{data[0].openDefects.length}</div>
+            </div>
+          </NavLink>
+          <NavLink to={{
+            pathname: '/todo-defects',
+            todoDefectProps: {
+              todoDefectData: data[0].todoDefects
+            }
+          }} >
+            <div className="card">
+              <div className="name">Todo Defects</div>
+              <div className="value">{data[0].todoDefects.length}</div>
+            </div>
+          </NavLink>
         </div>
         {/* {getData()} */}
       </DesktopCard>
