@@ -29,6 +29,7 @@ const FixedDefects = (props) => {
       <DesktopCard>
         <div className="filter">
           <select
+            className="searchFilter"
             name="filter"
             id="filter"
             onChange={(event) =>

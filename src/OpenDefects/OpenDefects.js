@@ -3,10 +3,10 @@ import RenderTableData from "../RenderTableData/RenderTableData";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import SideNav from '../SideNav/SideNav';
 
-const TotalDefects = (props) => {
+const OpenDefects = (props) => {
   const [filter, setFilter] = useState('number');
   const [search, setSearch] = useState("AR");
-  const data = props.location.totalDefectProps.totalDefectData;
+  const data = props.location.openDefectProps.openDefectData;
 
   const getData = () => {
     return data.map((item, index) => (
@@ -21,7 +21,7 @@ const TotalDefects = (props) => {
     ));
   };
 
-  console.log("Total Defect", data);
+  console.log("Open Defect", data);
   return (
     <div className="container">
       <SideNav />
@@ -66,4 +66,4 @@ const TotalDefects = (props) => {
   );
 };
 
-export default TotalDefects;
+export default OpenDefects;

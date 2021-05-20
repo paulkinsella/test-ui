@@ -45,10 +45,10 @@ const HomePageNew = () => {
           </div>
         </NavLink>
         <NavLink to={{
-          pathname: '/inprogress',
-          // inProgressProps: {
-          //   inProgressData: item.inProgress
-          // }
+          pathname: '/weekly-report',
+          weeklyProps: {
+            weeklyData: item.weeklyReport
+          }
         }} >
           <div className="card">
             <div className="name">Weekly Report</div>
