@@ -1,15 +1,15 @@
-import './App.css';
 import React, { useState, useEffect } from "react";
 import DesktopCard from './DesktopCard/DesktopCard';
-import SideNav from './SideNav/SideNav';
 import { NavLink } from 'react-router-dom';
+import './App.css';
 
 
-const HomePage = () => {
-  const url = './test.json';
+const HomePageNew = () => {
+  const url = './testtwo.json';
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState('currentSprint');
-  const [search, setSearch] = useState('6');
+  const [search, setSearch] = useState('1');
+
 
   useEffect(() => {
     fetch(url)
@@ -19,64 +19,44 @@ const HomePage = () => {
       });
   }, []);
 
-  //console.log("Data", data);
+  // console.log("New Test Data", data);
+  // console.log("Test Filter", filter);
 
-  const currentSprintData = data[data.length - 1];
-  console.log("Homepage currentSprintData", currentSprintData);
+  // const result = data && data.defectReport !== null ? data.filter(item => item === filter) : '';
+  // console.log("Result", result);
+
+  // const result = data.filter(item => item === []);
+  // console.log("Result", result);
 
   const getData = () => {
     const filterResult = data.filter(item => !!item[filter] && item[filter] === search);
-    // console.log("FilterData", filterResult);
+    console.log("FilterData", filterResult);
     return filterResult.map((item) => (
       <> <div className="row">
         <NavLink to={{
-          pathname: '/todo',
-          todoProps: {
-            todoData: item.todo
+          pathname: '/defect-report',
+          defectProps: {
+            defectData: item.defectReport
           }
         }} >
           <div className="card">
-            <div className="name">ToDo</div>
-            <div className="value">{item.todo.length}</div>
+            <div className="name">Defect Report</div>
+            <div className="value">{''}</div>
           </div>
         </NavLink>
         <NavLink to={{
           pathname: '/inprogress',
-          inProgressProps: {
-            inProgressData: item.inProgress
-          }
+          // inProgressProps: {
+          //   inProgressData: item.inProgress
+          // }
         }} >
           <div className="card">
-            <div className="name">InProgress</div>
-            <div className="value">{item.inProgress.length}</div>
+            <div className="name">Weekly Report</div>
+            <div className="value">{''}</div>
           </div>
         </NavLink>
-        <NavLink to={{
-          pathname: '/verification-pending',
-          verPendingProps: {
-            verPendingData: item.varPending
-          }
-        }} >
-          <div className="card">
-            <div className="name">Verification Pending</div>
-            <div className="value">{item.varPending.length}</div>
-          </div>
-        </NavLink>
+
       </div>
-        <div className="row">
-          <div className="card">
-            <div className="name">Test</div>
-            <div className="value">{item.test.length}</div>
-          </div>
-          <div className="card">
-            <div className="name">PO Acceptance</div>
-            <div className="value">{item.poAcceptance.length}</div>
-          </div>
-          <div className="card">
-            <div className="name">Done</div>
-            <div className="value">{item.done.length}</div>
-          </div>
-        </div>
         <div className="info">
           <div className="sprint">Sprint: {item.currentSprint}</div>
           <div className="week">Week <br />{item.weekStart} - {item.weekEnd}</div>
@@ -87,9 +67,11 @@ const HomePage = () => {
     ));
   };
 
+  // getData();
+
   return (
     <div className="container">
-      <SideNav currentSprintData={currentSprintData} />
+      {/* <SideNav currentSprintData={currentSprintData} /> */}
       <div className="headerSection">Arachas Phase: 3</div>
       <DesktopCard>
         <div className="filter">
@@ -122,4 +104,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default HomePageNew;
