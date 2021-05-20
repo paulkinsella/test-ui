@@ -9,7 +9,7 @@ const DefectReport = (props) => {
   console.log("Defect Data", data);
   return (
     <div className="container">
-      <SideNav />
+      <SideNav data={data} />
       <div className="headerSection">Defect Report</div>
       <DesktopCard>
         <div className="row">

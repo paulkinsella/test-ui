@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePageNew from './HomePageNew';
 import Todo from './Todo/Todo';
 import Overview from './Overview/Overview';
+import OverviewTwo from './Overview/OverviewTwo';
 import InProgress from './InProgress/InProgress';
 import VerPending from './VerPending/VerPending';
 import DefectReport from './DefectReport/DefectReport';
@@ -26,6 +27,7 @@ const Main = () => {
         <Route exact path='/' component={HomePageNew}></Route>
         <Route exact path='/todo' component={Todo}></Route>
         <Route exact path='/overview' component={Overview}></Route>
+        <Route exact path='/overview-two' component={OverviewTwo}></Route>
         <Route exact path='/inprogress' component={InProgress}></Route>
         <Route exact path='/verification-pending' component={VerPending}></Route>
         <Route exact path='/defect-report' component={DefectReport}></Route>
