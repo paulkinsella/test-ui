@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 import SideNav from '../SideNav/SideNav';
 
 const WeeklyReport = (props) => {
-  const data = props.location.weeklyProps.weeklyData;
+  const data = props.location.weeklyProps.weeklyData[0];
 
   console.log("Weekly Data", data);
   return (
     <div className="container">
-      <SideNav />
+      <SideNav data={data} />
       <div className="headerSection">Weekly Report</div>
       <DesktopCard>
         <div className="row">
@@ -21,7 +21,7 @@ const WeeklyReport = (props) => {
           }} >
             <div className="card">
               <div className="name">Passed</div>
-              <div className="value">{data[0].passed.length}</div>
+              <div className="value">{data.passed.length}</div>
             </div>
           </NavLink>
           <NavLink to={{
@@ -32,7 +32,7 @@ const WeeklyReport = (props) => {
           }} >
             <div className="card">
               <div className="name">Failed</div>
-              <div className="value">{data[0].failed.length}</div>
+              <div className="value">{data.failed.length}</div>
             </div>
           </NavLink>
         </div>
@@ -46,7 +46,7 @@ const WeeklyReport = (props) => {
           }} >
             <div className="card">
               <div className="name">Tests Executed</div>
-              <div className="value">{data[0].testExecuted.length}</div>
+              <div className="value">{data.testExecuted.length}</div>
             </div>
           </NavLink>
           <NavLink to={{
@@ -57,7 +57,7 @@ const WeeklyReport = (props) => {
           }} >
             <div className="card">
               <div className="name">Tests inProgress</div>
-              <div className="value">{data[0].testInProgress.length}</div>
+              <div className="value">{data.testInProgress.length}</div>
             </div>
           </NavLink>
         </div>

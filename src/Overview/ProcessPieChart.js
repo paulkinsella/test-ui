@@ -16,16 +16,16 @@ const ProcessPieChart = ({ data }) => {
         fill="#82ca9d"
       >
         {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
+          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
-      <Legend verticalAlign="bottom" height={36}/>
+      <Legend verticalAlign="bottom" height={36} />
     </PieChart>
   );
-}
+};
 
 ProcessPieChart.propTypes = {
   data: PropTypes.array
-}
+};
 
 export default ProcessPieChart;
