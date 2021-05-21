@@ -1,5 +1,5 @@
 import React from "react";
-import "./Overview.css";
+import "./Overview.scss";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import SideNav from '../SideNav/SideNav';
 import { Chart } from 'react-charts';
@@ -7,14 +7,34 @@ import ProcessPieChart from './ProcessPieChart';
 import ProcessBarChart from './ProcessBarChart';
 
 const OverviewTwo = (props) => {
-  // const {
-  //   data
-  // } = props;
-  // console.log("OverviewTwo data", data);
+  const className = 'c-ProcessOverview';
   const data = props.location.weeklyReportProps.weeklyReportData;
-  console.log("OverviewTwo", data);
+  console.log("Overview Two", data);
+  const {
+    Result,
+    ClientName,
+    StartDate,
+    StartTime,
+    ReleaseName,
+    TestsNotRun,
+    TestsRun,
+    TestsFailed, TestsSuites,
+    TestsPassed
+  } = props;
+  // console.log("OverviewTwo data", data);
+  // const data = props.location.weeklyProps.weeklyData;
+  // console.log("OverviewTwo", data);
   //   const overviewData = props.location.overviewProps.overviewData;
   //   console.log("Overview Data", overviewData);
+  console.log("Overview Props", props);
+  console.log("Test Suites", TestsSuites);
+
+  const pieChartData = data.map(suite => {
+    return {
+      name: suite.Result,
+      value: suite.TestsPassed + suite.TestsFailed,
+    };
+  });
 
 
   //   const data = React.useMemo(
@@ -52,26 +72,26 @@ const OverviewTwo = (props) => {
       </div> */}
       {/* <img src={overview} alt="overview" /> */}
 
-      <div className={"className"}>
-        <h3 className={`${"className"}--title`}>
-          <div>Overview of Process ID: 1234 Release: <span className={`${"className"}--titleValue`}>{"ReleaseName"}</span></div>
-          <div>Customer Name: <span className={`${"className"}--titleValue`}>{"ClientName"}</span></div>
+      <div className={className}>
+        <h3 className={`${className}--title`}>
+          <div>Overview of Process ID: 1234 Release: <span className={`${className}--titleValue`}>{ReleaseName}</span></div>
+          <div>Customer Name: <span className={`${className}--titleValue`}>{ClientName}</span></div>
         </h3>
-        <div className={`${"className"}--titleDetails`}>
-          <div>Date Started: {"StartDate"} {"StartTime"}</div>
+        <div className={`${className}--titleDetails`}>
+          <div>Date Started: {StartDate} {StartTime}</div>
           <div>Time Taken: {"getDuration(StartTime, FinishTime)"}</div>
         </div>
 
-        <div className={`${"className"}__chartContainer`}>
+        <div className={`${className}__chartContainer`}>
           <div>
             <div>
-              <ProcessPieChart data={data.passed} />
+              <ProcessPieChart data={pieChartData} />
             </div>
             <div>
-              <div className={`${"className"}--testSuitesPieChartData`}>
-                {data.passed.map((suite, index) => {
-                  return (<div key={`test-suite-${index}`} className={`${"className"}--testSuitesPieChartDataItem`}>{suite.assignee}: <span
-                    className={`${"className"}--testSuitesPieChartDataValue`}>{suite.name + suite.number}</span>
+              <div className={`${className}--testSuitesPieChartData`}>
+                {data.map((suite, index) => {
+                  return (<div key={`test-suite-${index}`} className={`${className}--testSuitesPieChartDataItem`}>{suite.TestArea}: <span
+                    className={`${className}--testSuitesPieChartDataValue`}>{suite.TestName + suite.TestID}</span>
                   </div>);
                 })}
               </div>
@@ -79,29 +99,29 @@ const OverviewTwo = (props) => {
             </div>
           </div>
           <div>
-            <ProcessBarChart data={data.failed} />
+            <ProcessBarChart data={data} />
             <div>
-              <table className={`${"className"}--testSuitesTotals`}>
+              <table className={`${className}--testSuitesTotals`}>
                 <tbody>
                   <tr>
                     <td>Total Number of Tests</td>
-                    <td>{"TestsRun + TestsNotRun"}</td>
+                    <td>{TestsRun + TestsNotRun}</td>
                   </tr>
                   <tr>
                     <td>Test Run</td>
-                    <td>{"TestsRun"}</td>
+                    <td>{TestsRun}</td>
                   </tr>
                   <tr>
                     <td>Test Passed</td>
-                    <td>{"TestsPassed"}</td>
+                    <td>{Result}</td>
                   </tr>
                   <tr>
                     <td>Test Failed</td>
-                    <td>{"TestsFailed"}</td>
+                    <td>{TestsFailed}</td>
                   </tr>
                   <tr>
                     <td>Test Not Run</td>
-                    <td>{"TestsNotRun"}</td>
+                    <td>{TestsNotRun}</td>
                   </tr>
                 </tbody>
               </table>
