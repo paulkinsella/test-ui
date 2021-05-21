@@ -3,111 +3,124 @@
     "currentSprint": "1",
     "weekStart": "26/11/2020",
     "weekEnd": "02/12/2020",
-    "weeklyReport": [
+    "TestsSuites": [
       {
-        "passed": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ],
-        "failed": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ],
-        "testInProgress": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ],
-        "testExecuted": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ]
+        "TestID": 2231,
+        "TestName": "Login",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Pass",
+        "FailedStep": "I Clicked the Login Button",
+        "Reasons": "any message",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 2245,
+        "TestName": "Create Payment",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Fail",
+        "FailedStep": "Payment Failed",
+        "Reasons": "Network interuption",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 18,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 2250,
+        "TestName": "Create Invoice",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Fail",
+        "FailedStep": "I Clicked the pay now button",
+        "Reasons": "Invalid card number",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 4000,
+        "TestName": "Create Supplier",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Fail",
+        "FailedStep": "Cannot find supplier",
+        "Reasons": "Invalid Supplier",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 4001,
+        "TestName": "Update Address",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Pass",
+        "FailedStep": "Adress not found",
+        "Reasons": "Invalid Address",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 4001,
+        "TestName": "Update Address",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Pass",
+        "FailedStep": "Adress not found",
+        "Reasons": "Invalid Address",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 4001,
+        "TestName": "Update Address",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Pass",
+        "FailedStep": "Adress not found",
+        "Reasons": "Invalid Address",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
       }
     ],
     "defectReport": [
       {
         "totalDefect": [
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
           {
             "number": "AR-225",
             "name": "Update to Terms and Condidtion",
@@ -177,106 +190,76 @@
     "currentSprint": "2",
     "weekStart": "26/11/2020",
     "weekEnd": "02/12/2020",
-    "weeklyReport": [
+    "TestsSuites": [
       {
-        "passed": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ],
-        "failed": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ],
-        "testInProgress": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ],
-        "testExecuted": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ]
+        "TestID": 2231,
+        "TestName": "Login",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Pass",
+        "FailedStep": "I Clicked the Login Button",
+        "Reasons": "any message",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 2245,
+        "TestName": "Create Payment",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Fail",
+        "FailedStep": "Payment Failed",
+        "Reasons": "Network interuption",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 2250,
+        "TestName": "Create Invoice",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Fail",
+        "FailedStep": "I Clicked the pay now button",
+        "Reasons": "Invalid card number",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 4000,
+        "TestName": "Create Supplier",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Fail",
+        "FailedStep": "Cannot find supplier",
+        "Reasons": "Invalid Supplier",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 4001,
+        "TestName": "Update Address",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Pass",
+        "FailedStep": "Adress not found",
+        "Reasons": "Invalid Address",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
       }
     ],
     "defectReport": [
@@ -351,106 +334,76 @@
     "currentSprint": "3",
     "weekStart": "26/11/2020",
     "weekEnd": "02/12/2020",
-    "weeklyReport": [
+    "TestsSuites": [
       {
-        "passed": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ],
-        "failed": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ],
-        "testInProgress": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ],
-        "testExecuted": [
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          }
-        ]
+        "TestID": 2231,
+        "TestName": "Login",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Pass",
+        "FailedStep": "I Clicked the Login Button",
+        "Reasons": "any message",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 2245,
+        "TestName": "Create Payment",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Fail",
+        "FailedStep": "Payment Failed",
+        "Reasons": "Network interuption",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 2250,
+        "TestName": "Create Invoice",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Fail",
+        "FailedStep": "I Clicked the pay now button",
+        "Reasons": "Invalid card number",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 4000,
+        "TestName": "Create Supplier",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Fail",
+        "FailedStep": "Cannot find supplier",
+        "Reasons": "Invalid Supplier",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 8,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
+      },
+      {
+        "TestID": 4001,
+        "TestName": "Update Address",
+        "TestArea": "Procurement",
+        "TestDuration": "00:01:20",
+        "Result": "Pass",
+        "FailedStep": "Adress not found",
+        "Reasons": "Invalid Address",
+        "TestsRun": 2,
+        "TestsNotRun": 5,
+        "TestsPassed": 6,
+        "TestsFailed": 2,
+        "ErorrMsg": "Exception in thread main java.lang.ArrayIndexOutOfBoundsException: 10 at Main.main(Main.java:4)"
       }
     ],
     "defectReport": [

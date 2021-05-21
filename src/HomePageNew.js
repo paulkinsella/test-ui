@@ -47,7 +47,7 @@ const HomePageNew = () => {
         <NavLink to={{
           pathname: '/weekly-report',
           weeklyProps: {
-            weeklyData: item.weeklyReport
+            weeklyData: item.TestsSuites
           }
         }} >
           <div className="card">
