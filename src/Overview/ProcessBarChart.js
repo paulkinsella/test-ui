@@ -3,7 +3,7 @@ import React from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 
 const ProcessPieChart = ({ data }) => {
-  console.log("Chart Data", data);
+  console.log("Chart Data 2", data);
   return (
     <BarChart
       width={500}
@@ -17,14 +17,14 @@ const ProcessPieChart = ({ data }) => {
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="TestName" />
+      <XAxis dataKey="Result" />
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="passed" stackId="a" fill="#0088FE" />
-      <Bar dataKey="failed" stackId="a" fill="#FF8042" />
-      <Bar dataKey="testExecuted" stackId="a" fill="#ccc" />
-      <Bar dataKey="testInProgress" stackId="a" fill="#ccc" />
+      <Bar dataKey="TestsRun" stackId="a" fill="#0088FE" />
+      <Bar dataKey="Result" stackId="a" fill="#FF8042" />
+      {/* <Bar dataKey="TestsPassed" stackId="a" fill="#ccc" /> */}
+      <Bar dataKey="TestsNotRun" stackId="a" fill="#ccc" />
     </BarChart>
   );
 };
