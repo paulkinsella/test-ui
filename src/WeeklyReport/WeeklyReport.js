@@ -5,7 +5,10 @@ import SideNav from '../SideNav/SideNav';
 
 const WeeklyReport = (props) => {
   const data = props.location.weeklyProps.weeklyData;
-  console.log("Weekly Data", data);
+  const sprintData = props.location.weeklyProps.sprintData;
+  const dateData = props.location.weeklyProps.dateData;
+  const dateEnd = props.location.weeklyProps.dateEnd;
+  console.log("Weekly Data", dateData);
   const numOfTests = data.length;
   const failedtest = data.filter(item => item.Result === "Fail");
   console.log("Test", failedtest);
@@ -17,7 +20,7 @@ const WeeklyReport = (props) => {
   // console.log("Weekly Data", data);
   return (
     <div className="container">
-      <SideNav data={data} />
+      <SideNav data={data} sprintData={sprintData} dateData={dateData} dateEnd={dateEnd} />
       <div className="headerSection">Weekly Report</div>
       <DesktopCard>
         <div className="row">

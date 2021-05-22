@@ -3,9 +3,12 @@ import "./SideNav.css";
 
 const SideNav = (props) => {
   const {
+    dateEnd,
+    dateData,
+    sprintData,
     data
   } = props;
-  console.log("Side Nav data", data);
+  console.log("Side Nav data", dateData);
   return (
     <div class="sidenav">
       <NavLink to={{
@@ -26,7 +29,10 @@ const SideNav = (props) => {
       <NavLink to={{
         pathname: '/overview-two',
         weeklyReportProps: {
-          weeklyReportData: data
+          weeklyReportData: data,
+          sprintData: sprintData,
+          dateData: dateData,
+          dateEnd: dateEnd
         }
       }}>
         <i class="fa fa-line-chart fa-2x" aria-hidden="true"></i>

@@ -21,10 +21,10 @@ const ProcessPieChart = ({ data }) => {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="TestsRun" stackId="a" fill="#0088FE" />
-      <Bar dataKey="Result" stackId="a" fill="#FF8042" />
-      {/* <Bar dataKey="TestsPassed" stackId="a" fill="#ccc" /> */}
-      <Bar dataKey="TestsNotRun" stackId="a" fill="#ccc" />
+      <Bar dataKey="TestExecuted" stackId="a" fill="#0088FE" />
+      <Bar dataKey="PassedTest" stackId="a" fill="green" />
+      <Bar dataKey="FailedTest" stackId="a" fill="red" />
+      {/* <Bar dataKey="TestsNotRun" stackId="a" fill="#ccc" /> */}
     </BarChart>
   );
 };
