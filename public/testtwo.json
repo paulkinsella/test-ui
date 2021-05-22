@@ -112,9 +112,24 @@
             "assignee": "Developer One"
           },
           {
+            "number": "AR-235",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer Two"
+          },
+          {
+            "number": "AR-425",
+            "name": "Test Ticket",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-925",
+            "name": "Update to Payment",
+            "assignee": "Developer Two"
+          },
+          {
             "number": "AR-225",
             "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
+            "assignee": "Developer Three"
           },
           {
             "number": "AR-225",
@@ -122,29 +137,34 @@
             "assignee": "Developer One"
           },
           {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
-            "assignee": "Developer One"
-          },
-          {
-            "number": "AR-225",
-            "name": "Update to Terms and Condidtion",
+            "number": "AR-1025",
+            "name": "Update Mapping",
             "assignee": "Developer One"
           }
         ],
         "fixedDefect": [
           {
             "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-700",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-1025",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-225",
+            "name": "Update to Terms and Condidtion",
+            "assignee": "Developer One"
+          },
+          {
+            "number": "AR-666",
             "name": "Update to Terms and Condidtion",
             "assignee": "Developer One"
           },

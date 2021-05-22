@@ -6,7 +6,13 @@ import SideNav from '../SideNav/SideNav';
 const TotalDefects = (props) => {
   const [filter, setFilter] = useState('number');
   const [search, setSearch] = useState("AR");
-  const data = props.location.totalDefectProps.totalDefectData;
+  const orgData = props.location.totalDefectProps.totalDefectData;
+
+  const fixedDefect = orgData.fixedDefect;
+  const todoDefect = orgData.todoDefects;
+  const openDefects = orgData.openDefects;
+  const getDefects = fixedDefect.concat(todoDefect);
+  const data = getDefects.concat(openDefects);
 
   const getData = () => {
     return data.map((item, index) => (
@@ -15,13 +21,14 @@ const TotalDefects = (props) => {
   };
 
   const getFilter = () => {
-    const filterResult = data ? data.filter(item => !!item[filter] && item[filter].includes(search)) : '';
+    const filterResult = data ?
+      data.filter(item => !!item[filter] && item[filter].includes(search))
+      : '';
     return filterResult.map((item, index) => (
       <RenderTableData item={item} index={index} />
     ));
   };
 
-  console.log("Total Defect", data);
   return (
     <div className="container">
       <SideNav />

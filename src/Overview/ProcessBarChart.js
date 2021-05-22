@@ -3,7 +3,7 @@ import React from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 
 const ProcessPieChart = ({ data }) => {
-  console.log("Chart Data 2", data);
+
   return (
     <BarChart
       width={500}

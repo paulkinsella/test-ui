@@ -6,7 +6,8 @@ import SideNav from '../SideNav/SideNav';
 const DefectReport = (props) => {
   const data = props.location.defectProps.defectData;
 
-  console.log("Defect Data", data);
+  const totalDefectNumber = data[0].fixedDefect.length + data[0].openDefects.length + data[0].todoDefects.length;
+
   return (
     <div className="container">
       <SideNav data={data} />
@@ -16,12 +17,12 @@ const DefectReport = (props) => {
           <NavLink to={{
             pathname: '/total-defects',
             totalDefectProps: {
-              totalDefectData: data[0].totalDefect
+              totalDefectData: data[0]
             }
           }} >
             <div className="card">
               <div className="name">Total Defects</div>
-              <div className="value">{data[0].totalDefect.length}</div>
+              <div className="value">{totalDefectNumber}</div>
             </div>
           </NavLink>
           <NavLink to={{
