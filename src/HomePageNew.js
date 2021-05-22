@@ -41,18 +41,21 @@ const HomePageNew = () => {
         }} >
           <div className="card">
             <div className="name">Defect Report</div>
-            <div className="value">{''}</div>
+            <div className="value"><i class="fa fa-bug fa-1x"></i></div>
           </div>
         </NavLink>
         <NavLink to={{
           pathname: '/weekly-report',
           weeklyProps: {
-            weeklyData: item.TestsSuites
+            weeklyData: item.TestsSuites,
+            sprintData: item.currentSprint,
+            dateData: item.weekStart,
+            dateEnd: item.weekEnd
           }
         }} >
           <div className="card">
             <div className="name">Weekly Report</div>
-            <div className="value">{''}</div>
+            <div className="value"><i class="fa fa-clipboard fa-1x"></i></div>
           </div>
         </NavLink>
 
