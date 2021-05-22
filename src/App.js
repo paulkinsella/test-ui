@@ -6,7 +6,6 @@ import Todo from './Todo/Todo';
 import Overview from './Overview/Overview';
 import OverviewTwo from './Overview/OverviewTwo';
 import InProgress from './InProgress/InProgress';
-import VerPending from './VerPending/VerPending';
 import DefectReport from './DefectReport/DefectReport';
 import TotalDefects from './TotalDefects/TotalDefects';
 import FixedDefects from "./FixedDefects/FixedDefects";
@@ -29,7 +28,6 @@ const Main = () => {
         <Route exact path='/overview' component={Overview}></Route>
         <Route exact path='/overview-two' component={OverviewTwo}></Route>
         <Route exact path='/inprogress' component={InProgress}></Route>
-        <Route exact path='/verification-pending' component={VerPending}></Route>
         <Route exact path='/defect-report' component={DefectReport}></Route>
         <Route exact path='/total-defects' component={TotalDefects}></Route>
         <Route exact path='/fixed-defects' component={FixedDefects}></Route>
