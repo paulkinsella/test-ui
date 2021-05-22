@@ -3,7 +3,8 @@ import React from 'react';
 import { Cell, Legend, Pie, PieChart } from 'recharts';
 
 const ProcessPieChart = ({ data }) => {
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+  console.log("Pie Chart Data", data);
+  const COLORS = ['green', 'red', '#0088FE', '#FF8042'];
   return (
     <PieChart width={500} height={350}>
       <Pie

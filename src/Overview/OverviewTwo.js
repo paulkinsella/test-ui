@@ -9,77 +9,52 @@ import ProcessBarChart from './ProcessBarChart';
 const OverviewTwo = (props) => {
   const className = 'c-ProcessOverview';
   const data = props.location.weeklyReportProps.weeklyReportData;
-  console.log("Overview Two", data);
-  const {
-    Result,
-    ClientName,
-    StartDate,
-    StartTime,
-    ReleaseName,
-    TestsNotRun,
-    TestsRun,
-    TestsFailed, TestsSuites,
-    TestsPassed
-  } = props;
-  // console.log("OverviewTwo data", data);
-  // const data = props.location.weeklyProps.weeklyData;
-  // console.log("OverviewTwo", data);
-  //   const overviewData = props.location.overviewProps.overviewData;
-  //   console.log("Overview Data", overviewData);
-  console.log("Overview Props", props);
-  console.log("Test Suites", TestsSuites);
+  const currentSprint = props.location.weeklyReportProps.sprintData;
+  const sprintdate = props.location.weeklyReportProps.dateData;
+  const dateEnd = props.location.weeklyReportProps.dateEnd;
+  const testExecuted = data.length;
+  const testPassedArray = data.filter(item => item.Result === "Pass");
+  const totalPassedtest = testPassedArray.length;
+  const testFailedArray = data.filter(item => item.Result === "Fail");
+  const totalFailedtest = testFailedArray.length;
 
-  const pieChartData = data.map(suite => {
-    return {
-      name: suite.Result,
-      value: suite.TestsPassed + suite.TestsFailed,
-    };
-  });
+  const barChartData = [{
+    "TestExecuted": testExecuted,
+  },
+  {
+    "PassedTest": totalPassedtest
+  },
+  {
+    "FailedTest": totalFailedtest,
+  }];
 
+  const pieChartData = [{
+    name: "Pass",
+    value: totalPassedtest
+  },
+  {
+    name: "Fail",
+    value: totalFailedtest
+  },
+  {
+    name: "TestExecuted",
+    value: testExecuted
+  }];
 
-  //   const data = React.useMemo(
-  //     () => [
-  //       [
-  //         ["Todo", overviewData.todo.length],
-  //         ["InProgress", overviewData.inProgress.length],
-  //         ["Verification Pending", overviewData.varPending.length],
-  //         ["Test", overviewData.test.length],
-  //         ["POAcceptance", overviewData.poAcceptance.length],
-  //         ["Done", overviewData.done.length]],
-  //     ],
-  //     []
-  //   );
-
-  //   const axes = React.useMemo(
-  //     () => [
-  //       { primary: true, type: 'ordinal', position: 'bottom' },
-  //       { type: 'ordinal', position: 'left' }
-  //     ],
-  //     []
-  //   );
+  console.log("Test", barChartData);
 
   return <div className="container">
     <SideNav />
     <div className="headerSection">Overview</div>
     <DesktopCard>
-      {/* <div
-        style={{
-          width: '100%',
-          height: '300px'
-        }}
-      >
-        <Chart data={data} axes={axes} />
-      </div> */}
-      {/* <img src={overview} alt="overview" /> */}
-
       <div className={className}>
         <h3 className={`${className}--title`}>
-          <div>Overview of Process ID: 1234 Release: <span className={`${className}--titleValue`}>{ReleaseName}</span></div>
-          <div>Customer Name: <span className={`${className}--titleValue`}>{ClientName}</span></div>
+          <div>Overview of Sprint:{currentSprint} <span className={`${className}--titleValue`}>{''}</span></div>
+          <div>Arachas Phase: 3 <span className={`${className}--titleValue`}>{' '}</span></div>
         </h3>
         <div className={`${className}--titleDetails`}>
-          <div>Date Started: {StartDate} {StartTime}</div>
-          <div>Time Taken: {"getDuration(StartTime, FinishTime)"}</div>
+          <div>Date Started: {sprintdate}</div>
+          <div>Date Ended: {dateEnd}</div>
         </div>
 
         <div className={`${className}__chartContainer`}>
@@ -89,9 +64,9 @@ const OverviewTwo = (props) => {
             </div>
             <div>
               <div className={`${className}--testSuitesPieChartData`}>
-                {data.map((suite, index) => {
-                  return (<div key={`test-suite-${index}`} className={`${className}--testSuitesPieChartDataItem`}>{suite.TestArea}: <span
-                    className={`${className}--testSuitesPieChartDataValue`}>{suite.TestName + suite.TestID}</span>
+                {pieChartData.map((suite, index) => {
+                  return (<div key={`test-suite-${index}`} className={`${className}--testSuitesPieChartDataItem`}>{suite.name}: <span
+                    className={`${className}--testSuitesPieChartDataValue`}>{suite.value}</span>
                   </div>);
                 })}
               </div>
@@ -99,29 +74,21 @@ const OverviewTwo = (props) => {
             </div>
           </div>
           <div>
-            <ProcessBarChart data={data} />
+            <ProcessBarChart data={barChartData} />
             <div>
               <table className={`${className}--testSuitesTotals`}>
                 <tbody>
                   <tr>
-                    <td>Total Number of Tests</td>
-                    <td>{TestsRun + TestsNotRun}</td>
+                    <td>Tests Executed</td>
+                    <td>{testExecuted}</td>
                   </tr>
                   <tr>
-                    <td>Test Run</td>
-                    <td>{TestsRun}</td>
+                    <td>Passed Test</td>
+                    <td>{totalPassedtest}</td>
                   </tr>
                   <tr>
-                    <td>Test Passed</td>
-                    <td>{Result}</td>
-                  </tr>
-                  <tr>
-                    <td>Test Failed</td>
-                    <td>{TestsFailed}</td>
-                  </tr>
-                  <tr>
-                    <td>Test Not Run</td>
-                    <td>{TestsNotRun}</td>
+                    <td>Failed Test</td>
+                    <td>{totalFailedtest}</td>
                   </tr>
                 </tbody>
               </table>
