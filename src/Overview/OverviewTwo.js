@@ -2,7 +2,6 @@ import React from "react";
 import "./Overview.scss";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import SideNav from '../SideNav/SideNav';
-import { Chart } from 'react-charts';
 import ProcessPieChart from './ProcessPieChart';
 import ProcessBarChart from './ProcessBarChart';
 
@@ -41,7 +40,6 @@ const OverviewTwo = (props) => {
     value: testExecuted
   }];
 
-  console.log("Test", barChartData);
 
   return <div className="container">
     <SideNav />

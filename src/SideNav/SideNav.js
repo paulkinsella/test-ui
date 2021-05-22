@@ -8,7 +8,7 @@ const SideNav = (props) => {
     sprintData,
     data
   } = props;
-  console.log("Side Nav data", dateData);
+
   return (
     <div class="sidenav">
       <NavLink to={{
