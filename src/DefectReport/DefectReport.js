@@ -5,12 +5,12 @@ import SideNav from '../SideNav/SideNav';
 
 const DefectReport = (props) => {
   const data = props.location.defectProps.defectData;
+  const type = 'defect';
 
   const totalDefectNumber = data[0].fixedDefect.length + data[0].openDefects.length + data[0].todoDefects.length;
-
   return (
     <div className="container">
-      <SideNav data={data} />
+      <SideNav data={data} type={type} />
       <div className="headerSection">Defect Report</div>
       <DesktopCard>
         <div className="row">

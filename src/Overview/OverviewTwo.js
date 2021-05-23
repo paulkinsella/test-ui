@@ -7,6 +7,12 @@ import ProcessBarChart from './ProcessBarChart';
 
 const OverviewTwo = (props) => {
   const className = 'c-ProcessOverview';
+
+  const type = props.location.type;
+  console.log("Overview Type", type);
+  console.log("Overview Props", props.location);
+
+  //Weekly Details
   const data = props.location.weeklyReportProps.weeklyReportData;
   const currentSprint = props.location.weeklyReportProps.sprintData;
   const sprintdate = props.location.weeklyReportProps.dateData;
@@ -41,6 +47,65 @@ const OverviewTwo = (props) => {
   }];
 
 
+  //Defect Details
+  const defectData = props.location.defectReportProps ? props.location.defectReportProps.allDefectData[0] : [];
+  console.log("defectData", defectData);
+  const fixedDefects = defectData.fixedDefect ? defectData.fixedDefect.length : '';
+  console.log("Fixed Defects", fixedDefects);
+  const openDefects = defectData.openDefects ? defectData.openDefects.length : '';
+  console.log("openDefects", openDefects);
+  const todoDefects = defectData.todoDefects ? defectData.todoDefects.length : '';
+  console.log("todoDefects", todoDefects);
+  const totalDefects = fixedDefects + openDefects + todoDefects;
+  console.log("totalDefects", totalDefects);
+
+  const defectBarChart = [{
+    "TotalDefects": totalDefects,
+    "OpenDefects": openDefects,
+    "FixedDefects": fixedDefects,
+    "TodoDefects": todoDefects
+  }];
+
+  const defectPieChartData = [{
+    name: "TotalDefects",
+    value: totalDefects
+  },
+  {
+    name: "OpenDefects",
+    value: openDefects
+  },
+  {
+    name: "FixedDefects",
+    value: fixedDefects
+  },
+  {
+    name: "TodoDefects",
+    value: todoDefects
+  }];
+
+  const getBarChartData = () => {
+    if (type === 'week') {
+      return barChartData;
+    } else if (type === 'defect') {
+      return defectBarChart;
+    } else {
+      return '';
+    }
+  };
+
+  const getPieChartData = () => {
+    if (type === 'week') {
+      return pieChartData;
+    } else if (type === 'defect') {
+      return defectPieChartData;
+    } else {
+      return '';
+    }
+  };
+
+
+
+
   return <div className="container">
     <SideNav />
     <div className="headerSection">Overview</div>
@@ -58,7 +123,7 @@ const OverviewTwo = (props) => {
         <div className={`${className}__chartContainer`}>
           <div>
             <div>
-              <ProcessPieChart data={pieChartData} />
+              <ProcessPieChart data={getPieChartData()} type={type} />
             </div>
             <div>
               <div className={`${className}--testSuitesPieChartData`}>
@@ -72,7 +137,7 @@ const OverviewTwo = (props) => {
             </div>
           </div>
           <div>
-            <ProcessBarChart data={barChartData} />
+            <ProcessBarChart data={getBarChartData()} type={type} />
             <div>
               <table className={`${className}--testSuitesTotals`}>
                 <tbody>

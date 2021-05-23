@@ -2,8 +2,8 @@ import PropTypes from "prop-types";
 import React from 'react';
 import { Bar, BarChart, CartesianGrid, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 
-const ProcessPieChart = ({ data }) => {
-
+const ProcessPieChart = ({ data, type }) => {
+  console.log("Chart Type", type);
   return (
     <BarChart
       width={500}
@@ -21,10 +21,10 @@ const ProcessPieChart = ({ data }) => {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="TestExecuted" stackId="a" fill="#0088FE" />
-      <Bar dataKey="PassedTest" stackId="a" fill="green" />
-      <Bar dataKey="FailedTest" stackId="a" fill="red" />
-      {/* <Bar dataKey="TestsNotRun" stackId="a" fill="#ccc" /> */}
+      <Bar dataKey={type === 'week' ? "TestExecuted" : 'TotalDefects'} stackId="a" fill="#0088FE" />
+      <Bar dataKey={type === 'week' ? "PassedTest" : 'OpenDefects'} stackId="a" fill="green" />
+      <Bar dataKey={type === 'week' ? "FailedTest" : 'FixedDefects'} stackId="a" fill="red" />
+      {/* {type === 'defect' ? <Bar dataKey="TodoDefects" stackId="a" fill="#ccc" /> : ''} */}
     </BarChart>
   );
 };
