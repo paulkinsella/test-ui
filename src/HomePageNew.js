@@ -19,15 +19,6 @@ const HomePageNew = () => {
       });
   }, []);
 
-  // console.log("New Test Data", data);
-  // console.log("Test Filter", filter);
-
-  // const result = data && data.defectReport !== null ? data.filter(item => item === filter) : '';
-  // console.log("Result", result);
-
-  // const result = data.filter(item => item === []);
-  // console.log("Result", result);
-
   const getData = () => {
     const filterResult = data.filter(item => !!item[filter] && item[filter] === search);
     console.log("FilterData", filterResult);
@@ -36,7 +27,7 @@ const HomePageNew = () => {
         <NavLink to={{
           pathname: '/defect-report',
           defectProps: {
-            defectData: item.defectReport
+            defectData: item.defectReport,
           }
         }} >
           <div className="card">
@@ -50,7 +41,7 @@ const HomePageNew = () => {
             weeklyData: item.TestsSuites,
             sprintData: item.currentSprint,
             dateData: item.weekStart,
-            dateEnd: item.weekEnd
+            dateEnd: item.weekEnd,
           }
         }} >
           <div className="card">
@@ -70,11 +61,8 @@ const HomePageNew = () => {
     ));
   };
 
-  // getData();
-
   return (
     <div className="container">
-      {/* <SideNav currentSprintData={currentSprintData} /> */}
       <div className="headerSection">Arachas Phase: 3</div>
       <DesktopCard>
         <div className="filter">

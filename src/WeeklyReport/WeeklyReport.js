@@ -16,11 +16,12 @@ const WeeklyReport = (props) => {
   const passedtest = data.filter(item => item.Result === "Pass");
   console.log("Passed test", passedtest);
   const passedTestAmount = passedtest.length;
+  const type = 'week';
 
   // console.log("Weekly Data", data);
   return (
     <div className="container">
-      <SideNav data={data} sprintData={sprintData} dateData={dateData} dateEnd={dateEnd} />
+      <SideNav data={data} sprintData={sprintData} dateData={dateData} dateEnd={dateEnd} type={type} />
       <div className="headerSection">Weekly Report</div>
       <DesktopCard>
         <div className="row">
