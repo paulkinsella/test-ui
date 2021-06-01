@@ -4,13 +4,12 @@ import DesktopCard from '../DesktopCard/DesktopCard';
 import SideNav from '../SideNav/SideNav';
 import ProcessPieChart from './ProcessPieChart';
 import ProcessBarChart from './ProcessBarChart';
+import { WEEK_REPORT_TYPE } from '../Constants/Constants';
+import { DEFECT_REPORT_TYPE } from '../Constants/Constants';
 
 const OverviewTwo = (props) => {
   const className = 'c-ProcessOverview';
-
   const type = props.location.type;
-  console.log("Overview Type", type);
-  console.log("Overview Props", props.location);
 
   //Weekly Details
   const data = props.location.weeklyReportProps.weeklyReportData;
@@ -49,15 +48,10 @@ const OverviewTwo = (props) => {
 
   //Defect Details
   const defectData = props.location.defectReportProps ? props.location.defectReportProps.allDefectData[0] : [];
-  console.log("defectData", defectData);
   const fixedDefects = defectData.fixedDefect ? defectData.fixedDefect.length : '';
-  console.log("Fixed Defects", fixedDefects);
   const openDefects = defectData.openDefects ? defectData.openDefects.length : '';
-  console.log("openDefects", openDefects);
   const todoDefects = defectData.todoDefects ? defectData.todoDefects.length : '';
-  console.log("todoDefects", todoDefects);
   const totalDefects = fixedDefects + openDefects + todoDefects;
-  console.log("totalDefects", totalDefects);
 
   const defectBarChart = [{
     "TotalDefects": totalDefects,
@@ -84,9 +78,9 @@ const OverviewTwo = (props) => {
   }];
 
   const getBarChartData = () => {
-    if (type === 'week') {
+    if (type === WEEK_REPORT_TYPE) {
       return barChartData;
-    } else if (type === 'defect') {
+    } else if (type === DEFECT_REPORT_TYPE) {
       return defectBarChart;
     } else {
       return '';
@@ -94,21 +88,18 @@ const OverviewTwo = (props) => {
   };
 
   const getPieChartData = () => {
-    if (type === 'week') {
+    if (type === WEEK_REPORT_TYPE) {
       return pieChartData;
-    } else if (type === 'defect') {
+    } else if (type === DEFECT_REPORT_TYPE) {
       return defectPieChartData;
     } else {
       return '';
     }
   };
 
-
-
-
   return <div className="container">
     <SideNav />
-    <div className="headerSection">Overview</div>
+    <div className="headerSection">{type === WEEK_REPORT_TYPE ? 'Weekly Overview' : 'Defect Overview'}</div>
     <DesktopCard>
       <div className={className}>
         <h3 className={`${className}--title`}>
@@ -127,7 +118,11 @@ const OverviewTwo = (props) => {
             </div>
             <div>
               <div className={`${className}--testSuitesPieChartData`}>
-                {pieChartData.map((suite, index) => {
+                {type === WEEK_REPORT_TYPE ? pieChartData.map((suite, index) => {
+                  return (<div key={`test-suite-${index}`} className={`${className}--testSuitesPieChartDataItem`}>{suite.name}: <span
+                    className={`${className}--testSuitesPieChartDataValue`}>{suite.value}</span>
+                  </div>);
+                }) : defectPieChartData.map((suite, index) => {
                   return (<div key={`test-suite-${index}`} className={`${className}--testSuitesPieChartDataItem`}>{suite.name}: <span
                     className={`${className}--testSuitesPieChartDataValue`}>{suite.value}</span>
                   </div>);
@@ -141,18 +136,31 @@ const OverviewTwo = (props) => {
             <div>
               <table className={`${className}--testSuitesTotals`}>
                 <tbody>
-                  <tr>
+                  {type === WEEK_REPORT_TYPE ? <tr>
                     <td>Tests Executed</td>
                     <td>{testExecuted}</td>
-                  </tr>
-                  <tr>
+                  </tr> : <tr>
+                    <td>TotalDefects</td>
+                    <td>{totalDefects}</td>
+                  </tr>}
+                  {type === WEEK_REPORT_TYPE ? <tr>
                     <td>Passed Test</td>
                     <td>{totalPassedtest}</td>
-                  </tr>
-                  <tr>
+                  </tr> : <tr>
+                    <td>OpenDefects</td>
+                    <td>{openDefects}</td>
+                  </tr>}
+                  {type === WEEK_REPORT_TYPE ? <tr>
                     <td>Failed Test</td>
                     <td>{totalFailedtest}</td>
-                  </tr>
+                  </tr> : <tr>
+                    <td>FixedDefects</td>
+                    <td>{fixedDefects}</td>
+                  </tr>}
+                  {type !== WEEK_REPORT_TYPE ? <tr>
+                    <td>TodoDefects</td>
+                    <td>{todoDefects}</td>
+                  </tr> : ''}
                 </tbody>
               </table>
             </div>

@@ -4,7 +4,7 @@ import { Cell, Legend, Pie, PieChart } from 'recharts';
 
 const ProcessPieChart = ({ data }) => {
 
-  const COLORS = ['green', 'red', '#0088FE', '#FF8042'];
+  const COLORS = ['green', 'red', 'orange', '#FF8042'];
   return (
     <PieChart width={500} height={350}>
       <Pie
