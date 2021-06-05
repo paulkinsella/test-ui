@@ -4,7 +4,7 @@ import DesktopCard from '../DesktopCard/DesktopCard';
 import SideNav from '../SideNav/SideNav';
 
 const TodoDefects = (props) => {
-  const [filter, setFilter] = useState('number');
+  const [filter, setFilter] = useState('key');
   const [search, setSearch] = useState("AR");
   const data = props.location.todoDefectProps.todoDefectData;
 
@@ -35,7 +35,7 @@ const TodoDefects = (props) => {
             onChange={(event) =>
               setFilter(event.target.value)
             }>
-            <option>number</option>
+            <option>key</option>
             <option>name</option>
             <option>assignee</option>
           </select>
@@ -57,6 +57,7 @@ const TodoDefects = (props) => {
               <td className="cellHeading">Number</td>
               <td className="cellHeading">Name</td>
               <td className="cellHeading">Assignee</td>
+              <td className="cellHeading">Priority</td>
             </tr>
             {search === " " ? getData() : getFilter()}
           </table>

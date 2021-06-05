@@ -4,9 +4,11 @@ import DesktopCard from '../DesktopCard/DesktopCard';
 import SideNav from '../SideNav/SideNav';
 
 const FixedDefects = (props) => {
-  const [filter, setFilter] = useState('number');
+  const [filter, setFilter] = useState('key');
   const [search, setSearch] = useState("AR");
   const data = props.location.fixedDefectProps.fixedDefectData;
+
+  console.log("Fixed Defects", data);
 
   const getData = () => {
     return data.map((item, index) => (
@@ -35,7 +37,7 @@ const FixedDefects = (props) => {
             onChange={(event) =>
               setFilter(event.target.value)
             }>
-            <option>number</option>
+            <option>key</option>
             <option>name</option>
             <option>assignee</option>
           </select>
@@ -57,6 +59,7 @@ const FixedDefects = (props) => {
               <td className="cellHeading">Number</td>
               <td className="cellHeading">Name</td>
               <td className="cellHeading">Assignee</td>
+              <td className="cellHeading">Priority</td>
             </tr>
             {search === " " ? getData() : getFilter()}
           </table>

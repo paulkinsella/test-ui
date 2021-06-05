@@ -7,10 +7,14 @@ const SideNav = (props) => {
     dateEnd,
     dateData,
     sprintData,
-    data
+    data,
+    totalDefectArray,
+    openDefects,
+    doneDefects,
+    inProgress
   } = props;
 
-  console.log("Side Nav Type", type);
+  console.log("Side Nav Type", totalDefectArray);
 
   return (
     <div className="sidenav">
@@ -40,7 +44,10 @@ const SideNav = (props) => {
 
         },
         defectReportProps: {
-          allDefectData: data,
+          totalDefectData: totalDefectArray,
+          totalOpendefects: openDefects,
+          totalDoneDefects: doneDefects,
+          totalInprogressDefects: inProgress
 
         }
       }}>
