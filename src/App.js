@@ -12,6 +12,7 @@ import FixedDefects from "./FixedDefects/FixedDefects";
 import OpenDefects from './OpenDefects/OpenDefects';
 import TodoDefects from './TodoDefects/TodoDefects';
 import WeeklyReport from './WeeklyReport/WeeklyReport';
+import UserStories from './UserStories/UserStories';
 
 const App = () => (
   <div className='app'>
@@ -34,6 +35,7 @@ const Main = () => {
         <Route exact path='/open-defects' component={OpenDefects}></Route>
         <Route exact path='/todo-defects' component={TodoDefects}></Route>
         <Route exact path='/weekly-report' component={WeeklyReport}></Route>
+        <Route exact path='/user-stories' component={UserStories}></Route>
       </Switch>
     </BrowserRouter></>;
 };
