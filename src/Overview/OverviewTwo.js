@@ -12,38 +12,53 @@ const OverviewTwo = (props) => {
   const type = props.location.type;
 
   //Weekly Details
-  // const data = props.location.weeklyReportProps.weeklyReportData;
-  // const currentSprint = props.location.weeklyReportProps.sprintData;
-  // const sprintdate = props.location.weeklyReportProps.dateData;
-  // const dateEnd = props.location.weeklyReportProps.dateEnd;
-  // const testExecuted = data.length;
-  // const testPassedArray = data.filter(item => item.Result === "Pass");
-  // const totalPassedtest = testPassedArray.length;
-  // const testFailedArray = data.filter(item => item.Result === "Fail");
-  // const totalFailedtest = testFailedArray.length;
+  const testExecuted = props.location.weeklyReportProps.totalNumOfTest;
+  console.log("Overview Result", testExecuted);
 
-  // const barChartData = [{
-  //   "TestExecuted": testExecuted,
-  // },
-  // {
-  //   "PassedTest": totalPassedtest
-  // },
-  // {
-  //   "FailedTest": totalFailedtest,
-  // }];
+  const paassedtest = props.location.weeklyReportProps.numberOfPassedTests;
+  console.log("Passed tests", paassedtest);
 
-  // const pieChartData = [{
-  //   name: "Pass",
-  //   value: totalPassedtest
-  // },
-  // {
-  //   name: "Fail",
-  //   value: totalFailedtest
-  // },
-  // {
-  //   name: "TestExecuted",
-  //   value: testExecuted
-  // }];
+  const totalFailedtest = props.location.weeklyReportProps.numberOfFailedTests;
+
+  const barChartData = [{
+    "TestExecuted": testExecuted,
+  },
+  {
+    "PassedTest": paassedtest
+  },
+  {
+    "FailedTest": totalFailedtest,
+  }];
+
+  const pieChartData = [{
+    name: "Pass",
+    value: paassedtest
+  },
+  {
+    name: "Fail",
+    value: totalFailedtest
+  },
+  {
+    name: "TestExecuted",
+    value: testExecuted
+  }];
+
+  const getWeeklyReportTable = () => {
+    return (
+      <><tr>
+        <td>Tests Executed</td>
+        <td>{testExecuted}</td></tr>
+        <tr>
+          <td>Passed Test</td>
+          <td>{paassedtest}</td>
+        </tr>
+        <tr>
+          <td>Failed Test</td>
+          <td>{totalFailedtest}</td>
+        </tr>
+      </>
+    );
+  };
 
 
   //Defect Details
@@ -56,7 +71,9 @@ const OverviewTwo = (props) => {
   const totalInprogressDefects = inProgressDefects ? inProgressDefects.length : '';
   const totalDefects = defectData ? defectData.length : '';
 
-  console.log("OVERVIEW TEST", defectData);
+
+
+  // console.log("OVERVIEW TEST", defectData);
 
   const defectBarChart = [{
     "TotalDefects": totalDefects,
@@ -78,14 +95,35 @@ const OverviewTwo = (props) => {
     value: totalDoneDefects
   },
   {
-    name: "TodoDefects",
+    name: "InProgress",
     value: totalInprogressDefects
   }];
 
+  const getDefectReportTable = () => {
+    return (
+      <><tr>
+        <td>Total Defects</td>
+        <td>{totalDefects}</td></tr>
+        <tr>
+          <td>Open Defects</td>
+          <td>{totalOpenDefects}</td>
+        </tr>
+        <tr>
+          <td>Fixed Defects</td>
+          <td>{totalDoneDefects}</td>
+        </tr>
+        <tr>
+          <td>InProgress Defects</td>
+          <td>{totalInprogressDefects}</td>
+        </tr>
+      </>
+    );
+  };
+
   const getBarChartData = () => {
     if (type === WEEK_REPORT_TYPE) {
-      // return barChartData;
-      return '';
+      return barChartData;
+      // return '';
     } else if (type === DEFECT_REPORT_TYPE) {
       return defectBarChart;
     } else {
@@ -95,8 +133,8 @@ const OverviewTwo = (props) => {
 
   const getPieChartData = () => {
     if (type === WEEK_REPORT_TYPE) {
-      // return pieChartData;
-      return '';
+      return pieChartData;
+      // return '';
     } else if (type === DEFECT_REPORT_TYPE) {
       return defectPieChartData;
     } else {
@@ -124,7 +162,7 @@ const OverviewTwo = (props) => {
               <ProcessPieChart data={getPieChartData()} type={type} />
             </div>
             <div>
-              {/* <div className={`${className}--testSuitesPieChartData`}>
+              <div className={`${className}--testSuitesPieChartData`}>
                 {type === WEEK_REPORT_TYPE ? pieChartData.map((suite, index) => {
                   return (<div key={`test-suite-${index}`} className={`${className}--testSuitesPieChartDataItem`}>{suite.name}: <span
                     className={`${className}--testSuitesPieChartDataValue`}>{suite.value}</span>
@@ -134,7 +172,7 @@ const OverviewTwo = (props) => {
                     className={`${className}--testSuitesPieChartDataValue`}>{suite.value}</span>
                   </div>);
                 })}
-              </div> */}
+              </div>
 
             </div>
           </div>
@@ -143,31 +181,7 @@ const OverviewTwo = (props) => {
             <div>
               <table className={`${className}--testSuitesTotals`}>
                 <tbody>
-                  {type === WEEK_REPORT_TYPE ? <tr>
-                    <td>Tests Executed</td>
-                    {/* <td>{testExecuted}</td> */}
-                  </tr> : <tr>
-                    <td>TotalDefects</td>
-                    <td>{totalDefects}</td>
-                  </tr>}
-                  {type === WEEK_REPORT_TYPE ? <tr>
-                    <td>Passed Test</td>
-                    {/* <td>{totalPassedtest}</td> */}
-                  </tr> : <tr>
-                    <td>OpenDefects</td>
-                    <td>{openDefects}</td>
-                  </tr>}
-                  {type === WEEK_REPORT_TYPE ? <tr>
-                    <td>Failed Test</td>
-                    {/* <td>{totalFailedtest}</td> */}
-                  </tr> : <tr>
-                    <td>FixedDefects</td>
-                    {/* <td>{fixedDefects}</td> */}
-                  </tr>}
-                  {type !== WEEK_REPORT_TYPE ? <tr>
-                    <td>TodoDefects</td>
-                    {/* <td>{todoDefects}</td> */}
-                  </tr> : ''}
+                  {type === WEEK_REPORT_TYPE ? getWeeklyReportTable() : getDefectReportTable()}
                 </tbody>
               </table>
             </div>

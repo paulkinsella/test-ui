@@ -48,7 +48,7 @@ const WeeklyReport = (props) => {
   // console.log("Weekly Data", data);
   return (
     <div className="container">
-      <SideNav type={type} />
+      <SideNav type={type} totalNumOfTest={totalNumOfTest} numberOfPassedTests={numberOfPassedTests} numberOfFailedTests={numberOfFailedTests} />
       <div className="headerSection">Weekly Test Report</div>
       <DesktopCard>
         <div className="row">
