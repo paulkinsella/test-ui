@@ -1,28 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import { NavLink } from 'react-router-dom';
 import SideNav from '../SideNav/SideNav';
 
 const WeeklyReport = (props) => {
-  const data = props.location.weeklyProps.weeklyData;
-  const sprintData = props.location.weeklyProps.sprintData;
-  const dateData = props.location.weeklyProps.dateData;
-  const dateEnd = props.location.weeklyProps.dateEnd;
-  console.log("Weekly Data", dateData);
-  const numOfTests = data.length;
-  const failedtest = data.filter(item => item.Result === "Fail");
-  console.log("Test", failedtest);
-  const failedTestAmount = failedtest.length;
-  const passedtest = data.filter(item => item.Result === "Pass");
-  console.log("Passed test", passedtest);
-  const passedTestAmount = passedtest.length;
+  const url = './sampleResponse.json';
+  const [dataTwo, setDataTwo] = useState([]);
+
+  useEffect(() => {
+    fetch(url)
+      .then((response) => response.json())
+      .then((dataTwo) => {
+        setDataTwo(dataTwo);
+      });
+  }, []);
+
+  //get Sprint Related data
+  const sprintDataOrg = dataTwo ? dataTwo.issues : '';
+  console.log("Sprint Data", dataTwo);
+
+  //get all stories with a test subtask
+  const result = sprintDataOrg ? sprintDataOrg.filter(item => item.fields.issuetype.name.includes('Test')) : '';
+  console.log("Text Exection Stories", result);
+
+  //get total number of user stories with tests
+  const totalNumOfTest = result ? result.length : '';
+  console.log("total number of user stories with tests", totalNumOfTest);
+
+  //get all failed tests
+  const failedTests = result ? result.filter(item => item.fields.customfield_10441.value === 'Pass') : '';
+  console.log("Failed tests", failedTests);
+
+  //get number of failed tests 
+  const numberOfFailedTests = failedTests.length;
+  console.log("Number of failed tests", numberOfFailedTests);
+
+  //get all failed tests
+  const passedTests = result ? result.filter(item => item.fields.customfield_10441.value === 'Fail') : '';
+  console.log("Passed tests", passedTests);
+
+  //get number of failed tests 
+  const numberOfPassedTests = passedTests.length;
+  console.log("Number of Passed tests", numberOfPassedTests);
+
   const type = 'week';
 
   // console.log("Weekly Data", data);
   return (
     <div className="container">
-      <SideNav data={data} sprintData={sprintData} dateData={dateData} dateEnd={dateEnd} type={type} />
-      <div className="headerSection">Weekly Report</div>
+      <SideNav type={type} />
+      <div className="headerSection">Weekly Test Report</div>
       <DesktopCard>
         <div className="row">
           <NavLink to={{
@@ -33,7 +60,7 @@ const WeeklyReport = (props) => {
           }} >
             <div className="card">
               <div className="name"> Tests Passed</div>
-              <div className="value">{passedTestAmount}</div>
+              <div className="value">{numberOfPassedTests}</div>
             </div>
           </NavLink>
           <NavLink to={{
@@ -44,7 +71,7 @@ const WeeklyReport = (props) => {
           }} >
             <div className="card">
               <div className="name">Tests Failed</div>
-              <div className="value">{failedTestAmount}</div>
+              <div className="value">{numberOfFailedTests}</div>
             </div>
           </NavLink>
         </div>
@@ -58,18 +85,18 @@ const WeeklyReport = (props) => {
           }} >
             <div className="card">
               <div className="name">Tests Executed</div>
-              <div className="value">{numOfTests}</div>
+              <div className="value">{totalNumOfTest}</div>
             </div>
           </NavLink>
           <NavLink to={{
-            pathname: '/todo-defects',
-            // todoDefectProps: {
-            //   todoDefectData: data[0].todoDefects
-            // }
+            pathname: '/user-stories',
+            userStoryProps: {
+              userStoryData: result
+            }
           }} >
             <div className="card">
               <div className="name">User Stories</div>
-              <div className="value">{2}</div>
+              <div className="value">{totalNumOfTest}</div>
             </div>
           </NavLink>
         </div>

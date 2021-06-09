@@ -122,7 +122,7 @@
             "key": "AR-3228",
             "self": "https://singlepointsolutions.atlassian.net/rest/api/2/issue/28527",
             "fields": {
-              "summary": "Add desktop card",
+              "summary": "Test One",
               "status": {
                 "self": "https://singlepointsolutions.atlassian.net/rest/api/2/status/10001",
                 "description": "",
@@ -539,7 +539,84 @@
           "timeZone": "Europe/London",
           "accountType": "atlassian"
         },
-        "subtasks": [],
+        "subtasks": [
+          {
+            "id": "28527",
+            "key": "AR-3228",
+            "self": "https://singlepointsolutions.atlassian.net/rest/api/2/issue/28527",
+            "fields": {
+              "summary": "Test One",
+              "status": {
+                "self": "https://singlepointsolutions.atlassian.net/rest/api/2/status/10001",
+                "description": "",
+                "iconUrl": "https://singlepointsolutions.atlassian.net/",
+                "name": "Done",
+                "id": "10001",
+                "statusCategory": {
+                  "self": "https://singlepointsolutions.atlassian.net/rest/api/2/statuscategory/3",
+                  "id": 3,
+                  "key": "done",
+                  "colorName": "green",
+                  "name": "Done"
+                }
+              },
+              "priority": {
+                "self": "https://singlepointsolutions.atlassian.net/rest/api/2/priority/3",
+                "iconUrl": "https://singlepointsolutions.atlassian.net/images/icons/priorities/medium.svg",
+                "name": "Medium",
+                "id": "3"
+              },
+              "issuetype": {
+                "self": "https://singlepointsolutions.atlassian.net/rest/api/2/issuetype/10102",
+                "id": "10102",
+                "description": "A small piece of work that's part of a larger task.",
+                "iconUrl": "https://singlepointsolutions.atlassian.net/secure/viewavatar?size=medium&avatarId=10316&avatarType=issuetype",
+                "name": "Sub-task",
+                "subtask": true,
+                "avatarId": 10316,
+                "hierarchyLevel": -1
+              }
+            }
+          },
+          {
+            "id": "28528",
+            "key": "AR-3229",
+            "self": "https://singlepointsolutions.atlassian.net/rest/api/2/issue/28528",
+            "fields": {
+              "summary": "Add routes",
+              "status": {
+                "self": "https://singlepointsolutions.atlassian.net/rest/api/2/status/10001",
+                "description": "",
+                "iconUrl": "https://singlepointsolutions.atlassian.net/",
+                "name": "Done",
+                "id": "10001",
+                "statusCategory": {
+                  "self": "https://singlepointsolutions.atlassian.net/rest/api/2/statuscategory/3",
+                  "id": 3,
+                  "key": "done",
+                  "colorName": "green",
+                  "name": "Done"
+                }
+              },
+              "priority": {
+                "self": "https://singlepointsolutions.atlassian.net/rest/api/2/priority/3",
+                "iconUrl": "https://singlepointsolutions.atlassian.net/images/icons/priorities/medium.svg",
+                "name": "Medium",
+                "id": "3"
+              },
+              "issuetype": {
+                "self": "https://singlepointsolutions.atlassian.net/rest/api/2/issuetype/10102",
+                "id": "10102",
+                "description": "A small piece of work that's part of a larger task.",
+                "iconUrl": "https://singlepointsolutions.atlassian.net/secure/viewavatar?size=medium&avatarId=10316&avatarType=issuetype",
+                "name": "Sub-task",
+                "subtask": true,
+                "avatarId": 10316,
+                "hierarchyLevel": -1
+              }
+            }
+          }
+        ],
         "reporter": {
           "self": "https://singlepointsolutions.atlassian.net/rest/api/2/user?accountId=5fd102d408757f006e40b5a3",
           "accountId": "5fd102d408757f006e40b5a3",
@@ -1393,7 +1470,7 @@
           "id": "10100",
           "description": "Functionality or a feature expressed as a user goal.",
           "iconUrl": "https://singlepointsolutions.atlassian.net/images/icons/issuetypes/story.svg",
-          "name": "Story",
+          "name": "Bug",
           "subtask": false,
           "hierarchyLevel": 0
         },
@@ -1896,7 +1973,7 @@
               "id": "10100",
               "description": "Functionality or a feature expressed as a user goal.",
               "iconUrl": "https://singlepointsolutions.atlassian.net/images/icons/issuetypes/story.svg",
-              "name": "Story",
+              "name": "Bug",
               "subtask": false,
               "hierarchyLevel": 0
             }
@@ -2784,7 +2861,7 @@
           "id": "10100",
           "description": "Functionality or a feature expressed as a user goal.",
           "iconUrl": "https://singlepointsolutions.atlassian.net/images/icons/issuetypes/story.svg",
-          "name": "Story",
+          "name": "Bug",
           "subtask": false,
           "hierarchyLevel": 0
         },
@@ -3541,7 +3618,7 @@
           "id": "10100",
           "description": "Functionality or a feature expressed as a user goal.",
           "iconUrl": "https://singlepointsolutions.atlassian.net/images/icons/issuetypes/story.svg",
-          "name": "Story",
+          "name": "Bug",
           "subtask": false,
           "hierarchyLevel": 0
         },
@@ -3698,7 +3775,7 @@
               "id": "10100",
               "description": "Functionality or a feature expressed as a user goal.",
               "iconUrl": "https://singlepointsolutions.atlassian.net/images/icons/issuetypes/story.svg",
-              "name": "Story",
+              "name": "Bug",
               "subtask": false,
               "hierarchyLevel": 0
             }

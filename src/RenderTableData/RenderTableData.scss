@@ -1,9 +1,14 @@
 .c-RenderTableData {
   &__customRow {
-    border: 2px solid black;
+    text-align: center;
+    border: 5px solid red;
   }
   &__emptyRow {
     border: 2px solid black;
     height: 10px;
+  }
+  &__taskname {
+    text-align: left;
+    max-width: 200px;
   }
 }
