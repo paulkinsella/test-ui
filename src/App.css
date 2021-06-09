@@ -1,7 +1,7 @@
 .container {
   background-color: #abc3c5;
   text-align: center;
-  height: 1000px;
+  height: 100vh;
 }
 
 .headerSection {
@@ -67,6 +67,6 @@
 }
 
 .graphIcon {
- padding-left: 15px;
- display: contents;
+  padding-left: 15px;
+  display: contents;
 }

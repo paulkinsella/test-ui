@@ -3,10 +3,15 @@ import RenderTableData from "../RenderTableData/RenderTableData";
 import DesktopCard from '../DesktopCard/DesktopCard';
 import SideNav from '../SideNav/SideNav';
 
-const TodoDefects = (props) => {
+const UserStories = (props) => {
   const [filter, setFilter] = useState('key');
   const [search, setSearch] = useState("AR");
-  const data = props.location.todoDefectProps.todoDefectData;
+  const orgData = props.location.userStoryProps.userStoryData;
+  const type = 'UserStories';
+
+  const data = orgData;
+
+  console.log("User Story Data", data);
 
   const getData = () => {
     return data.map((item, index) => (
@@ -15,13 +20,16 @@ const TodoDefects = (props) => {
   };
 
   const getFilter = () => {
-    const filterResult = data ? data.filter(item => !!item[filter] && item[filter].includes(search)) : '';
-    return filterResult.map((item, index) => (
-      <RenderTableData item={item} index={index} />
+    const test = data ?
+      data.filter(item => !!item[filter] && item[filter].includes(search))
+      : '';
+    return test.map((item, index) => (
+      <RenderTableData item={item} index={index} type={type} />
+
     ));
+
   };
 
-  console.log("Open Defect", data);
   return (
     <div className="container">
       <SideNav />
@@ -67,4 +75,4 @@ const TodoDefects = (props) => {
   );
 };
 
-export default TodoDefects;
+export default UserStories;

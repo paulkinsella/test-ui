@@ -1,8 +1,8 @@
-.container {
+/* .container {
   background-color: #abc3c5;
   text-align: center;
   height: 1000px;
-}
+} */
 
 .tableContainer {
   padding-top: 50px;
@@ -15,16 +15,15 @@
   /* border-bottom: solid black 2px; */
 }
 
-td {
-  /* border: solid black 2px; */
-  text-align: center;
-}
-
 table {
-  width: 600px;
+  width: 80%;
   border: solid black 2px;
   margin: auto;
 }
+
+/* .tr {
+  border: solid black 2px;
+} */
 
 .cellHeading {
   font-size: 24px;

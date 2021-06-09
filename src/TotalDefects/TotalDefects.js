@@ -4,15 +4,13 @@ import DesktopCard from '../DesktopCard/DesktopCard';
 import SideNav from '../SideNav/SideNav';
 
 const TotalDefects = (props) => {
-  const [filter, setFilter] = useState('number');
+  const [filter, setFilter] = useState('key');
   const [search, setSearch] = useState("AR");
   const orgData = props.location.totalDefectProps.totalDefectData;
 
-  const fixedDefect = orgData.fixedDefect;
-  const todoDefect = orgData.todoDefects;
-  const openDefects = orgData.openDefects;
-  const getDefects = fixedDefect.concat(todoDefect);
-  const data = getDefects.concat(openDefects);
+  const data = orgData;
+
+  console.log("Test Data", data);
 
   const getData = () => {
     return data.map((item, index) => (
@@ -21,12 +19,14 @@ const TotalDefects = (props) => {
   };
 
   const getFilter = () => {
-    const filterResult = data ?
+    const test = data ?
       data.filter(item => !!item[filter] && item[filter].includes(search))
       : '';
-    return filterResult.map((item, index) => (
+    return test.map((item, index) => (
       <RenderTableData item={item} index={index} />
+
     ));
+
   };
 
   return (
@@ -42,7 +42,7 @@ const TotalDefects = (props) => {
             onChange={(event) =>
               setFilter(event.target.value)
             }>
-            <option>number</option>
+            <option>key</option>
             <option>name</option>
             <option>assignee</option>
           </select>
@@ -64,7 +64,9 @@ const TotalDefects = (props) => {
               <td className="cellHeading">Number</td>
               <td className="cellHeading">Name</td>
               <td className="cellHeading">Assignee</td>
+              <td className="cellHeading">Priority</td>
             </tr>
+            {/* {getData()} */}
             {search === " " ? getData() : getFilter()}
           </table>
         </div>
