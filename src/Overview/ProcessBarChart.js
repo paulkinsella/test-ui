@@ -21,9 +21,9 @@ const ProcessPieChart = ({ data, type }) => {
       <YAxis />
       <Tooltip />
       <Legend />
-      {type === 'defect' ? <Bar dataKey="OpenDefects" stackId="a" fill="red" /> : <Bar dataKey="TestExecuted" stackId="a" fill="#0088FE" />}
+      {type === 'defect' ? <Bar dataKey="VerificationPending" stackId="a" fill="red" /> : <Bar dataKey="TestExecuted" stackId="a" fill="#0088FE" />}
       {type === 'defect' ? <Bar dataKey="TotalDefects" stackId="b" fill="green" /> : <Bar dataKey="PassedTest" stackId="a" fill="green" />}
-      {type === 'defect' ? <Bar dataKey="TodoDefects" stackId="c" fill="#FF8042" /> : <Bar dataKey="FailedTest" stackId="a" fill="red" />}
+      {type === 'defect' ? <Bar dataKey="InProgress" stackId="c" fill="#FF8042" /> : <Bar dataKey="FailedTest" stackId="a" fill="red" />}
       {type === 'defect' ? <Bar dataKey="FixedDefects" stackId="d" fill="orange" /> : ''}
     </BarChart>
   );

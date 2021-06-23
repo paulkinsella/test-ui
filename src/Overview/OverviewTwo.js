@@ -77,17 +77,18 @@ const OverviewTwo = (props) => {
 
   const defectBarChart = [{
     "TotalDefects": totalDefects,
-    "OpenDefects": totalOpenDefects,
+    "VerificationPending": totalOpenDefects,
     "FixedDefects": totalDoneDefects,
     "InProgress": totalInprogressDefects
   }];
+  console.log("TEST", totalOpenDefects);
 
   const defectPieChartData = [{
     name: "TotalDefects",
     value: totalDefects
   },
   {
-    name: "OpenDefects",
+    name: "VerificationPending",
     value: totalOpenDefects
   },
   {
@@ -105,7 +106,7 @@ const OverviewTwo = (props) => {
         <td>Total Defects</td>
         <td>{totalDefects}</td></tr>
         <tr>
-          <td>Open Defects</td>
+          <td>Verification Pending</td>
           <td>{totalOpenDefects}</td>
         </tr>
         <tr>
@@ -177,7 +178,7 @@ const OverviewTwo = (props) => {
             </div>
           </div>
           <div>
-            <ProcessBarChart data={getBarChartData()} type={type} />;
+            <ProcessBarChart data={getBarChartData()} type={type} />
             <div>
               <table className={`${className}--testSuitesTotals`}>
                 <tbody>
