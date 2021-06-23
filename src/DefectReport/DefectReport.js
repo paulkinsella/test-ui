@@ -5,7 +5,7 @@ import SideNav from '../SideNav/SideNav';
 
 const DefectReport = (props) => {
   const type = 'defect';
-  const url = './sampleResponse.json';
+  const url = './defect.json';
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,8 @@ const DefectReport = (props) => {
   const totalDefects = totalDefectArray.length;
   const doneDefects = totalDefectArray ? totalDefectArray.filter(item => item.fields.status.name === "Done") : '';
   const openDefects = totalDefectArray ? totalDefectArray.filter(item => item.fields.status.name === "Verification Pending") : '';
-  const inProgress = totalDefectArray ? totalDefectArray.filter(item => item.fields.status.name === "In Progress") : '';
+  const inProgress = testArray ? testArray.filter(item => item.fields.status.name === 'In Progress') : '';
+  console.log("totalDefects", totalDefects);
 
   return (
     <div className="container">

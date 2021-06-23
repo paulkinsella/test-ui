@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import DesktopCard from './DesktopCard/DesktopCard';
 import { NavLink } from 'react-router-dom';
 import './App.css';
+import Test from './Test';
 
 
 const HomePageNew = () => {
@@ -65,6 +66,7 @@ const HomePageNew = () => {
     <div className="container">
       <div className="headerSection">Arachas Phase: 3</div>
       <DesktopCard>
+        <Test />
         <div className="filter">
           <select
             className="searchFilter"
